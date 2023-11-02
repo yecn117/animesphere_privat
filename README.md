@@ -22,6 +22,8 @@ Ich persönlich hoffe von diesem Projekt und auch von diesem Kurs mehr über Pyt
 
 Ziel von Yakub: 
 
-Ich hoffe mir nach Abschluss des Projektes im Bereich Programmierung von Web-Apps bewanderter zu sein, da ich später wahrscheinlich auch genau in diese Richtung gehen möchte.  
+Ich hoffe mir nach Abschluss des Projektes im Bereich Programmierung von Web-Apps bewanderter zu sein, da ich später wahrscheinlich auch genau in diese Richtung gehen möchte.
+
+Die Grafiken Version 1 und 2 sind zwei Möglichkeiten, wie wir unsere Web-App bauen möchten.
 
 

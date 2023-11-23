@@ -32,7 +32,7 @@ Die Grafiken Version 1 und 2 sind zwei Möglichkeiten, wie wir unsere Web-App ba
 
 **Aufteilung der Projektarbeit**
 
-LUKA: Suchfunktion (Suche nach Chatroom) und Datenbank
-YAKUB: Log-in System und die Create Chatroom-Funktion
+**LUKA:** Suchfunktion (Suche nach Chatroom) und Datenbank
+**YAKUB:** Log-in System und die Create Chatroom-Funktion
 
 

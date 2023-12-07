@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<form method="POST" class="btns" action="">
+    <h1 class="title">ANIMESPHERE</h1>
+    <div class="login">
+        <label>Name:</label>
+        <input class="input_field name" type="text" placeholder="your name..." name="name" value="{{name}}">
+
+        <label>Password:</label>
+        <input class="input_field pw" type="password" placeholder="your password..." name="password" value="{{password}}">
+    </div>
+    
+    <button class="sign_in_btn" type="submit" name="action" value="sign_in">
+        Sign in
+    </button>
+
+    <button class="log_in_btn" type="submit" name="action" value="log_in">
+        Log in
+    </button>
+    
+
+    {% if error %}
+    
+    <p class="error-message">{{error}}</p>
+        
+    {% endif %}
+
+    {% if message %}
+            <p class="message-message">{{ message }}</p>
+        {% endif %}
+</form>
+
+
+{% endblock %}

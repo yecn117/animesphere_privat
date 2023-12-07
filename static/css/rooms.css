@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_rooms_title {
+    margin-bottom: 100px;
+    transition: 0.2s ease-in;
+    transition: 0.8s ease-out;
+    font-size: 100px;
+    background-image: linear-gradient(to right, rgb(136, 130, 248), rgb(7, 0, 150));
+    background-size: 100% 4px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    line-height: 110px;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    font-family: fantasy;
+}
+
+.room-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Horizontaler Abstand zwischen Room-Elementen */
+}
+
+.room {
+    width: 400px;
+    height: 200px;
+    background-color: rgba(253, 253, 253, 0.8);
+    background-size: 100% 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 15px; /* Vertikaler Abstand zwischen Room-Zeilen */
+    transition: 0.4s ease-in;
+    transition: 0.25s ease-out;
+    border: 2px solid black;
+}
+
+.room:hover{
+    transform: scale(1.05);
+}

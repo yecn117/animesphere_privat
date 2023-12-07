@@ -1,0 +1,158 @@
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.9);
+}
+
+.title{
+    background-image: linear-gradient(to right, rgb(136, 130, 248), rgb(7, 0, 150));
+    background-size: 100% 4px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    line-height: 100px;
+    color: rgb(56, 56, 56);
+    font-size: 90px;
+    margin-top: 0px;
+    margin-bottom: 100px;
+    border-radius: 15px;
+    font-family: fantasy;
+}
+
+
+.sign_in_btn {
+    background-color: rgb(255, 255, 255, 0.9);
+    font-family: fantasy;
+    padding: 15px 200px;
+    font-size: 25px;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 0 0 0 rgb(53, 192, 242) inset;
+}
+
+.sign_in_btn:hover {
+    box-shadow: 175px 0 0 0 rgb(53, 192, 242) inset;
+    box-shadow: 480px 0 0 0 rgb(7, 0, 150) inset;
+    transform: scale(1.05);
+    color: white;
+}
+
+.log_in_btn{
+    background-color: rgb(255, 255, 255, 0.9);
+    font-family: fantasy;
+    padding: 15px 200px;
+    font-size: 25px;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 0 0 0 rgb(53, 192, 242) inset;
+}
+
+.log_in_btn:hover{
+    box-shadow: 175px 0 0 0 rgb(53, 192, 242) inset;
+    box-shadow: 480px 0 0 0 rgb(7, 0, 150) inset;
+    transform: scale(1.05);
+    color: white;
+}
+
+.btns{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgba(253, 253, 253, 0.8);
+    width: 800px;
+    height: 700px;
+    border-radius: 15px;
+} 
+
+.login {
+    transform: scale(1.5);
+    margin-bottom: 70px;
+}
+
+.input_field{
+    border: none;
+    background-color: rgba(239, 239, 239, 0.9);
+    border-radius: 10px;
+    padding: 8px 8px;
+    box-shadow: 3px 3px 6px rgb(0, 0, 0, 0.212);
+    transition: 0.2s;
+}
+
+.input_field:hover{
+    background-color: rgb(255, 255, 255, 0.9);
+}
+
+.name:focus{
+    outline: none;
+    background-color: rgb(255, 255, 255 0.9);
+    width: 200px;
+}
+
+.pw:focus{
+    outline: none;
+    background-color: rgb(255, 255, 255 0.9);
+    width: 200px;
+}
+
+.input_field::placeholder{
+    color: rgb(184, 184, 188);
+}
+
+label{
+    font-family: fantasy, Arial, sans-serif;
+}
+
+.error-message{
+    font-size: 25px;
+    color: red;
+    background-color: rgb(48, 48, 48, 0.8);
+    border-radius: 8px;
+}
+
+.message-message{
+    font-size: 25px;
+    color: rgb(0, 255, 8);
+    background-color: rgba(88, 33, 5, 0.8);
+    border-radius: 8px;
+}
+
+
+
+
+
+/* Styling für Chat.html */
+
+.my-form{
+    position: fixed;
+    bottom: 25px;
+    right: 80px;
+    left: 80px;
+    width: calc(100% - 160px);
+}
+
+.msg-date{
+      font-size: 10px;
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      color: rgb(0, 0, 0, 0.5);
+
+}
+
+   
+        

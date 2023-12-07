@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+<link rel="stylesheet" href="{{url_for('static', filename='css/rooms.css')}}"/>
+</head>
+ <script>
+        function showWelcomePopup() {
+            var welcomeMessage = "Willkommen, {{ session['name'] }}!";
+            var width = 400;
+            var height = 200;
+            var left = (window.innerWidth - width) / 3;
+            var top = (window.innerHeight - height) / 3;
+
+            var popup = window.open("", "WelcomePopup", "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top);
+            popup.document.write("<p>" + welcomeMessage + "</p>");
+        }
+        window.onload = showWelcomePopup;
+    </script>
+
+<div class="container">
+    <h1 class="main_rooms_title">Chat-Rooms</h1>
+
+    <form action="{{ url_for('rooms') }}" method="GET">
+        <input type="text" name="query" placeholder="Suche nach deinem Chat...">
+        <button type="submit">Suchen</button>
+    </form>
+
+    <div class="create-room-container">
+      <button class="createButton" type="button" onclick="showCreateForm()">Create Chatroom</button>
+
+         <div class="createForm" style="display: none;">
+            <form action="{{ url_for('rooms') }}" method="POST" enctype="multipart/form-data">
+                <label for="chatname">Chatroom Name:</label>
+                <input type="text" name="chatname" required>
+
+                <label for="image">Bild hochladen:</label>
+                <input type="file" name="image" accept="image/*" required>
+
+                <button type="submit">Bestätigen</button>
+            </form>
+        </div>
+
+    
+    </div>
+</div>
+
+<script>
+    function showCreateForm() {
+        var createButton = document.querySelector(".createButton");
+        var createForm = document.querySelector(".createForm");
+
+        createButton.style.display = "none";
+        createForm.style.display = "block";
+    }
+</script>
+
+
+
+</div>
+
+
+
+
+
+{% endblock %}

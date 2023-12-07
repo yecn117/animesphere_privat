@@ -1,0 +1,35 @@
+{% extends 'base.html'%}
+{% block content %}
+
+{% endblock %}
+
+
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Mein Chat-Messenger</a>
+  </div>
+</nav>
+
+
+<div class="container">
+{% for msg in messagess %}
+<div class="d-flex {%if name == msg.user %} justify-content-end {% else %} justify-content-start {% endif %} mt-3">
+<div class="card">
+     <div class="card-body">
+      <b>{{msg.user}}:</b>
+      {{msg.content}}
+      <span class="msg-date">{{msg.created_at.strftime('%d.%m.%Y %H:%M') }}</span>
+     </div>
+   </div>
+</div>
+{% endfor %}
+
+
+<form class="input-group mb-3 my-form" action="" method="POST">
+  <input type="text" name="content" class="form-control" placeholder="Nachricht...">
+  <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Senden</button>
+</form>
+
+</div>
+
+

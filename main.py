@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from werkzeug.utils import secure_filename
 import os
+from sqlalchemy import func
 from werkzeug.security import check_password_hash, generate_password_hash
 
 
@@ -85,38 +86,55 @@ def home():
 
 #rooms.html
 
-@app.route("/rooms", methods=["POST", "GET"])
-
+@app.route("/rooms", methods=["GET"])
 def rooms():
-    if request.method == "POST":
-        create = request.form.get("create", False)
-
-        if create:
-            process_create_form()
+    chatrooms = Chatroom.query.all()
 
     if "name" in session:
         username = session["name"]
         welcome_message = f"Willkommen, {username}!"
-        return render_template("rooms.html", welcome_message=welcome_message)
+        return render_template("rooms.html", welcome_message=welcome_message, chatrooms=chatrooms)
     else:
         return redirect(url_for("home"))
 
-def process_create_form():
-    chatname = request.form.get("chatname")
-    image = request.files["image"]
 
-    # Speichern des Bilds auf dem Server (Annahme: der Dateipfad ist 'static/uploads/')
-    image_path = f"static/img/chatrooms_img/{image.filename}"
+
+def normalize_chatname(chatname):
+    return chatname.lower().strip()
+
+@app.route("/create_room", methods=["POST"])
+def create_room():
+    chatname = request.form.get("chatname")
+    normalized_chatname = normalize_chatname(chatname)
+
+    image = request.files.get("image")
+
+    if not chatname or not image:
+        flash("Bitte fülle alle Felder aus.", "error")
+        return redirect(url_for("rooms"))
+
+    if not allowed_file(image.filename):
+        flash("Ungültige Dateiendung. Erlaubt sind: png, jpg, jpeg, gif", "error")
+        return redirect(url_for("rooms"))
+
+    # Überprüfe, ob ein Chatroom mit dem normalisierten Namen bereits existiert
+    existing_chatroom = Chatroom.query.filter(func.lower(Chatroom.chatname) == normalized_chatname).first()
+
+    if existing_chatroom:
+        flash("Einen Chatroom zu diesem Anime existiert bereits!", "error")
+        return redirect(url_for("rooms"))
+
+    image_folder = os.path.join("static", "img", "chatrooms")
+    image_path = os.path.join(image_folder, secure_filename(image.filename))
     image.save(image_path)
 
-    # Speichern der Daten in der Datenbank
-    new_chatroom = Chatroom(chatname=chatname, image_path=image_path)
+
+    new_chatroom = Chatroom(chatname=chatname, image=image_path)
     db.session.add(new_chatroom)
     db.session.commit()
 
-
-        
-
+    flash("Chatroom erfolgreich erstellt!", "success")
+    return redirect(url_for("rooms"))
             
     
     

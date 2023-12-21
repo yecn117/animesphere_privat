@@ -1,65 +1,46 @@
 {% extends 'base.html' %}
 {% block content %}
+
 <head>
 <link rel="stylesheet" href="{{url_for('static', filename='css/rooms.css')}}"/>
 </head>
- <script>
-        function showWelcomePopup() {
-            var welcomeMessage = "Willkommen, {{ session['name'] }}!";
-            var width = 400;
-            var height = 200;
-            var left = (window.innerWidth - width) / 3;
-            var top = (window.innerHeight - height) / 3;
 
-            var popup = window.open("", "WelcomePopup", "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top);
-            popup.document.write("<p>" + welcomeMessage + "</p>");
-        }
-        window.onload = showWelcomePopup;
-    </script>
+    <div class="container">
+        <div class="head-container">
+                   <h1 class="main_rooms_title">Chat-Rooms</h1>
 
-<div class="container">
-    <h1 class="main_rooms_title">Chat-Rooms</h1>
+           <form action="{{ url_for('create_room') }}" method="POST" enctype="multipart/form-data">
+               <input class="create-chatroom" type="text" name="chatname" placeholder="Chatroom Name" required>
+               <input class="create-chatroom" type="file" name="image" accept="image/*" required>
+               <button class="create-chatroom" type="submit">Create Chatroom</button>
+           </form>
 
-    <form action="{{ url_for('rooms') }}" method="GET">
-        <input type="text" name="query" placeholder="Suche nach deinem Chat...">
-        <button type="submit">Suchen</button>
-    </form>
+           <div class="flash-messages">
+               {% with messages = get_flashed_messages(with_categories=true) %}
+                   {% if messages %}
+                       {% for category, message in messages %}
+                           <div class="flash-{{ category }}">{{ message }}</div>
+                       {% endfor %}
+                   {% endif %}
+               {% endwith %}
+           </div>
 
-    <div class="create-room-container">
-      <button class="createButton" type="button" onclick="showCreateForm()">Create Chatroom</button>
-
-         <div class="createForm" style="display: none;">
-            <form action="{{ url_for('rooms') }}" method="POST" enctype="multipart/form-data">
-                <label for="chatname">Chatroom Name:</label>
-                <input type="text" name="chatname" required>
-
-                <label for="image">Bild hochladen:</label>
-                <input type="file" name="image" accept="image/*" required>
-
-                <button type="submit">Bestätigen</button>
-            </form>
         </div>
 
+        <!-- Hier können Sie die vorhandenen Chatrooms anzeigen -->
+        <div class="chatrooms-container">
+            {% for chatroom in chatrooms %}
+            <div class="chatroom-container">
+                <div class="chatroom">
+                <img src="{{ url_for('static', filename=chatroom.image) }}" alt="{{ chatroom.chatname }} Image">
+               </div>
+            </div>
+        {% endfor %}
+        </div>
     
     </div>
-</div>
 
-<script>
-    function showCreateForm() {
-        var createButton = document.querySelector(".createButton");
-        var createForm = document.querySelector(".createForm");
-
-        createButton.style.display = "none";
-        createForm.style.display = "block";
-    }
-</script>
-
-
-
-</div>
-
-
-
-
+   
+    
 
 {% endblock %}

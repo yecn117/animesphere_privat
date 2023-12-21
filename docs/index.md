@@ -14,18 +14,18 @@ nav_order: 0
 
 ## Team members
 
-### [Jane Dane]
+### [Yakub Ercan]
 
 About
-: Some info about Jane
+: Some info about Yakub
 
 Matr.-Nr.
 : 1234567
 
-### [Joe Doe]
+### [Luka Poljic]
 
 About
-: Some info about Joe
+: Some info about Luka
 
 Matr.-Nr.
 : 1234567

@@ -2,9 +2,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+.head-container {
+    margin-bottom: 100px;
 }
 
 .main_rooms_title {
+    display: flex;
+    justify-content: center;
     margin-bottom: 100px;
     transition: 0.2s ease-in;
     transition: 0.8s ease-out;
@@ -19,28 +26,56 @@
     font-family: fantasy;
 }
 
-.room-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px; /* Horizontaler Abstand zwischen Room-Elementen */
+.create-chatroom {
+    font-size: 15px;
 }
 
-.room {
-    width: 400px;
-    height: 200px;
+.flash-messages{
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.chatrooms-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.chatroom-container {
+    width: 300px; /* Breite nach Bedarf anpassen */
+    margin: 0 7.5px 15px 7.5px;
+}
+
+.chatroom {
     background-color: rgba(253, 253, 253, 0.8);
-    background-size: 100% 100%;
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
     position: relative;
-    margin-bottom: 15px; /* Vertikaler Abstand zwischen Room-Zeilen */
     transition: 0.4s ease-in;
     transition: 0.25s ease-out;
     border: 2px solid black;
+    height: 150px; /* Höhe nach Bedarf anpassen */
 }
 
-.room:hover{
+.chatroom img {
+    width: 100px;
+    height: 100px; /* 90% der Höhe von unten */
+    
+}
+
+.chatroom h2 {
+    margin: 0; /* Stelle sicher, dass kein zusätzlicher Abstand für das <h2>-Element vorhanden ist */
+}
+
+
+.chatroom:hover{
     transform: scale(1.05);
 }
+

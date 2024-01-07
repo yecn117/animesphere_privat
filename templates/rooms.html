@@ -7,12 +7,31 @@
 
     <div class="container">
         <div class="head-container">
-                   <h1 class="main_rooms_title">Chat-Rooms</h1>
+                   <h1 class="main_rooms_title"><span class="animation-text-goku2">CHAT-ROOMS</span></h1>
 
-           <form action="{{ url_for('create_room') }}" method="POST" enctype="multipart/form-data">
-               <input class="create-chatroom" type="text" name="chatname" placeholder="Chatroom Name" required>
-               <input class="create-chatroom" type="file" name="image" accept="image/*" required>
-               <button class="create-chatroom" type="submit">Create Chatroom</button>
+                <div class="nav">
+                    <a class="active" href="{{ url_for('rooms') }}">Home</a>
+                    <a href="{{ url_for('AboutAnimeSphere') }}">About Animesphere</a>
+                    <a href="{{ url_for('ContactUs') }}">Contact us</a>
+                    <a href="{{ url_for('home') }}" class="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    <form id="searchForm" action="{{ url_for('rooms') }}" method="GET" autocomplete="off">
+                        <div class="search-chatroom">
+                            <input type="text" name="search" id="searchInput" placeholder="Search Chatroom.." onkeypress="searchOnEnter(event)">
+                            <a class="search-ct-btn" href="#" onclick="submitSearchForm()">Suchen</a>
+                        </div>
+                        
+                        
+                    </form>
+                </div>
+
+                <h2>Du findest dein Anime-Chat nicht? Dann erstelle ganz einfach einen neuen Chat extra für deinen Anime!</h2>
+
+                <p class="create-chatroom-text">Chatroom Creation:</p>
+
+           <form action="{{ url_for('create_room') }}" method="POST" enctype="multipart/form-data" autocomplete="off">
+               <input class="create-chatroom input_chatname" type="text" name="chatname" placeholder="Chatroom Name" required>
+               <input class="create-chatroom input_img" type="file" name="image" accept="image/*" required>
+               <button class="create-chatroom btn_chatroom" type="submit">Create Chatroom</button>
            </form>
 
            <div class="flash-messages">
@@ -26,21 +45,33 @@
            </div>
 
         </div>
+        
 
         <!-- Hier können Sie die vorhandenen Chatrooms anzeigen -->
         <div class="chatrooms-container">
-            {% for chatroom in chatrooms %}
-            <div class="chatroom-container">
-                <div class="chatroom">
-                <img src="{{ url_for('static', filename=chatroom.image) }}" alt="{{ chatroom.chatname }} Image">
-               </div>
-            </div>
-        {% endfor %}
+            {% if no_results_message %}
+                <p class="error">{{ no_results_message }}</p>
+            {% else %}
+                {% for chatroom in chatrooms %}
+                    <div class="chatroom-container">
+                        <a href="{{ url_for('chat', chatroom_name=chatroom.chatname) }}">
+                            <div class="chatroom">
+                                <img src="{{ url_for('static', filename=chatroom.image) }}" alt="{{ chatroom.chatname }} Image">
+                                <p class="anime-name">{{ chatroom.chatname }}</p>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            {% endif %}
         </div>
     
     </div>
 
-   
+    <script>
+        function submitSearchForm() {
+            document.getElementById('searchForm').submit();
+        }
+    </script>
     
 
 {% endblock %}

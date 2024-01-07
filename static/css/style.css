@@ -1,9 +1,24 @@
+@font-face {
+    font-family: 'ronorgerion_demoregular';
+    src: url('/font/ronorgeriondemo-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/ronorgeriondemo-regular-webfont.woff2') format('woff2'),
+         url('/font/ronorgeriondemo-regular-webfont.woff') format('woff'),
+         url('/font/ronorgeriondemo-regular-webfont.ttf') format('truetype'),
+         url('/font/ronorgeriondemo-regular-webfont.svg#ronorgerion_demoregular') format('svg'),
+         url('/font/ronorgeriondemo-regular-demo.html')format('html'),
+         url('/font/ronorgeriondemo-regular-webfont.eot')format('eot');
+    font-weight: normal;
+    font-style: normal;
 
-.content{
+}
+
+body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+    height: 100vh; /* 100% der Bildschirmhöhe nutzen */
+    margin: 0; /* Außenabstand entfernen */
+  }
 
 #video-background {
     position: fixed;
@@ -21,15 +36,57 @@
     background-size: 100% 4px;
     background-position: bottom;
     background-repeat: no-repeat;
-    line-height: 100px;
+    line-height: 135px;
     color: rgb(56, 56, 56);
-    font-size: 90px;
+    font-size: 125px;
     margin-top: 0px;
     margin-bottom: 100px;
     border-radius: 15px;
     font-family: fantasy;
+
+    -webkit-text-stroke: 0.1px black; /* WebKit-Browser (Safari, Chrome) */
+    -moz-text-stroke: 0.1px black; /* Firefox */
+    -ms-text-stroke: 0.1px black; /* Internet Explorer */
+    -webkit-text-stroke: 0.1px black; /* WebKit-Browser (Safari, Chrome) */
+    -o-text-stroke: 0.1px black; /* Opera */
 }
 
+.animation-text-home {
+    color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+    background-image: url('/static/img/gojo.jpg');
+    background-size: 100%;
+    animation: bg-animation 2s cubic-bezier(0.5,0.5,0.5,0.5) infinite;
+}
+@keyframes bg-animation{
+    0%{background-position: 0% 0%;}
+    50%{background-position: 100% 100%;}
+    100%{background-position: 0% 0%;}
+}
+
+.input-pair {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Optional: Füge einen Abstand zwischen den Label-Input-Paaren hinzu */
+    gap: 5px;
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-password-container {
+    cursor: pointer;
+    margin-left: 5px; /* Optional: Füge einen Abstand zwischen dem Password-Input-Feld und dem Auge-Symbol hinzu */
+}
+
+.toggle-password {
+    color: #555; /* Optional: Setze die Farbe nach Bedarf */
+}
 
 .sign_in_btn {
     background-color: rgb(255, 255, 255, 0.9);
@@ -82,6 +139,9 @@
 .login {
     transform: scale(1.5);
     margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .input_field{
@@ -134,25 +194,6 @@ label{
 
 
 
-
-/* Styling für Chat.html */
-
-.my-form{
-    position: fixed;
-    bottom: 25px;
-    right: 80px;
-    left: 80px;
-    width: calc(100% - 160px);
-}
-
-.msg-date{
-      font-size: 10px;
-      position: absolute;
-      bottom: 4px;
-      right: 4px;
-      color: rgb(0, 0, 0, 0.5);
-
-}
 
    
         

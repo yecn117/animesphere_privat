@@ -1,35 +1,69 @@
-{% extends 'base.html'%}
-{% block content %}
 
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AnimeSphere</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/chat.css')}}"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+</head>
 
-
-<nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Mein Chat-Messenger</a>
+<body>
+    
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Mein Chat-Messenger</a>
+    </div>
+  </nav>
+  
+  
+  <div class="container">
+    {% for msg in messagess %}
+    <div class="message-container d-flex {% if user_name == msg.user_name %} justify-content-end {% else %} justify-content-start {% endif %} mt-3">
+      <div class="card">
+        <div class="card-body">
+          <b>{{msg.user_name}}:</b>
+          {{msg.content}}
+          <span class="msg-date">{{msg.created_at.strftime('%d.%m.%Y %H:%M') }}</span>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  
+    <form class="input-group mb-3 my-form" action="{{ url_for('save_message', chatroom_name=chatroom_name) }}" method="POST">
+      <input type="text" id="message-input" name="content" class="form-control" placeholder="Nachricht..." >
+      <button class="btn btn-outline-secondary" type="submit" id="button-addon2" onclick="removeFocus(); goBackToRooms();">Senden</button>
+    </form>
   </div>
-</nav>
+  
+  <div class="content">
+    {% block content %} {% endblock %}
+  </div>
+
+  <script>
+    // Funktion, um den Fokus vom Eingabebereich zu entfernen
+    function removeFocus() {
+      document.getElementById("message-input").blur();
+    }
+
+    // Funktion, um das Browsers-Verlaufspuffer-Ereignis zu steuern
+    function goBackToRooms() {
+      window.history.pushState({}, document.title, "{{ url_for('rooms') }}");
+      window.location.replace("{{ url_for('rooms') }}");
+    }
+  </script>
+
+</body>
+</html>
 
 
-<div class="container">
-{% for msg in messagess %}
-<div class="d-flex {%if name == msg.user %} justify-content-end {% else %} justify-content-start {% endif %} mt-3">
-<div class="card">
-     <div class="card-body">
-      <b>{{msg.user}}:</b>
-      {{msg.content}}
-      <span class="msg-date">{{msg.created_at.strftime('%d.%m.%Y %H:%M') }}</span>
-     </div>
-   </div>
-</div>
-{% endfor %}
 
 
-<form class="input-group mb-3 my-form" action="" method="POST">
-  <input type="text" name="content" class="form-control" placeholder="Nachricht...">
-  <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Senden</button>
-</form>
 
-</div>
+
+
+
 
 

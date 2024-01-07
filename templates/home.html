@@ -3,14 +3,24 @@
 
 
 <form method="POST" class="btns" action="" autocomplete="off">
-    <h1 class="title">ANIMESPHERE</h1>
+    <h1 class="title">ANIMES<span class="animation-text-home">PHER</span>E</h1>
     <div class="login">
-        <label>Name:</label>
-        <input class="input_field name" type="text" placeholder="your name..." name="name" value="{{name}}">
-
-        <label>Password:</label>
-        <input class="input_field pw" type="password" placeholder="your password..." name="password" value="{{password}}">
+        <div class="input-pair">
+            <label>Name:</label>
+            <input class="input_field name" type="text" placeholder="your name..." name="name" value="{{name}}">
+        </div>
+    
+        <div class="input-pair">
+            <label>Password:</label>
+            <div class="password-container">
+                <input class="input_field pw" type="password" placeholder="your password..." name="password" value="{{password}}">
+                <div class="toggle-password-container" onclick="togglePasswordVisibility(this)">
+                    <i class="toggle-password fas fa-eye"></i>
+                </div>
+            </div>
+        </div>
     </div>
+    
     
     <button class="sign_in_btn" type="submit" name="action" value="sign_in">
         Sign in
@@ -30,6 +40,27 @@
     {% if message %}
             <p class="message-message">{{ message }}</p>
         {% endif %}
+
+
+        
+
+        <script>
+            function togglePasswordVisibility(container) {
+                var passwordInput = container.previousElementSibling;
+                var icon = container.querySelector('.toggle-password');
+        
+                if (passwordInput.type === "password") {
+                    passwordInput.type = "text";
+                    icon.classList.remove("fa-eye");
+                    icon.classList.add("fa-eye-slash");
+                } else {
+                    passwordInput.type = "password";
+                    icon.classList.remove("fa-eye-slash");
+                    icon.classList.add("fa-eye");
+                }
+            }
+        </script>
+
 </form>
 
 

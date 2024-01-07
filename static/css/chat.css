@@ -1,0 +1,22 @@
+.my-form{
+    position: fixed;
+    bottom: 25px;
+    right: 80px;
+    left: 80px;
+    width: calc(100% - 160px);
+}
+
+.msg-date{
+      font-size: 10px;
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      color: rgb(0, 0, 0, 0.5);
+
+}
+
+.message-container {
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
+  

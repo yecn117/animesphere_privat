@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from werkzeug.utils import secure_filename
 import os
-from sqlalchemy import func
+from sqlalchemy import func, or_
 from werkzeug.security import check_password_hash, generate_password_hash
 
 
@@ -22,6 +22,7 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(200), unique=True, nullable=False)
@@ -32,16 +33,20 @@ class Chatroom(db.Model):
     chatname = db.Column(db.String(255), unique=True, nullable=False)
     image = db.Column(db.String(255), nullable=True)
 
+
 class Message(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(500), nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    
+
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    user_name = db.Column(db.String(200), nullable=False)
     user = db.relationship('User', backref=db.backref('messages', lazy=True), foreign_keys=[user_id])
-    
+
     chatroom_id = db.Column(db.Integer, db.ForeignKey('chatroom.id'), nullable=False)
     chatroom = db.relationship('Chatroom', backref=db.backref('messages', lazy=True), foreign_keys=[chatroom_id])
+    
+
 
 
 
@@ -87,16 +92,39 @@ def home():
 #rooms.html
 
 @app.route("/rooms", methods=["GET"])
-def rooms():
-    chatrooms = Chatroom.query.all()
 
+def rooms():
     if "name" in session:
         username = session["name"]
         welcome_message = f"Willkommen, {username}!"
-        return render_template("rooms.html", welcome_message=welcome_message, chatrooms=chatrooms)
+
+        # Holen Sie alle Chatrooms
+        chatrooms = Chatroom.query.all()
+
+        # Überprüfen, ob eine Suchanfrage vorliegt
+        search_query = request.args.get("search")
+        if search_query:
+            # Filtere nach Teilübereinstimmungen im Chatnamen
+            chatrooms = Chatroom.query.filter(or_(Chatroom.chatname.ilike(f"%{search_query}%"))).all()
+
+        # Überprüfen, ob Suchergebnisse vorhanden sind
+        if not chatrooms:
+            no_results_message = "Keine Chatrooms gefunden!"
+        else:
+            no_results_message = None
+
+        return render_template("rooms.html", welcome_message=welcome_message, chatrooms=chatrooms, no_results_message=no_results_message)
     else:
         return redirect(url_for("home"))
+    
 
+@app.route('/AboutAnimeSphere')
+def AboutAnimeSphere():
+    return render_template('AboutAnimeSphere.html')
+
+@app.route('/ContactUs')
+def ContactUs():
+    return render_template('ContactUs.html')
 
 
 def normalize_chatname(chatname):
@@ -104,6 +132,11 @@ def normalize_chatname(chatname):
 
 @app.route("/create_room", methods=["POST"])
 def create_room():
+
+    if Chatroom.query.count() >= 100:
+        flash("Es können nicht mehr als 100 Chatrooms erstellt werden.", "error")
+        return redirect(url_for("rooms"))
+    
     chatname = request.form.get("chatname")
     normalized_chatname = normalize_chatname(chatname)
 
@@ -123,18 +156,63 @@ def create_room():
     if existing_chatroom:
         flash("Einen Chatroom zu diesem Anime existiert bereits!", "error")
         return redirect(url_for("rooms"))
+    
 
-    image_folder = os.path.join("static", "img", "chatrooms")
-    image_path = os.path.join(image_folder, secure_filename(image.filename))
+    image_relative_path = os.path.join("img", "chatrooms", secure_filename(image.filename))
+    image_relative_path = os.path.normpath(image_relative_path).replace("\\", "/")
+
+    # Bild im statischen Verzeichnis speichern
+    image_path = os.path.join("static", image_relative_path)
     image.save(image_path)
 
-
-    new_chatroom = Chatroom(chatname=chatname, image=image_path)
+    new_chatroom = Chatroom(chatname=chatname, image=image_relative_path)
     db.session.add(new_chatroom)
     db.session.commit()
 
     flash("Chatroom erfolgreich erstellt!", "success")
     return redirect(url_for("rooms"))
+
+
+@app.route("/chat/<chatroom_name>")
+def chat(chatroom_name):
+    chatroom = Chatroom.query.filter_by(chatname=chatroom_name).first()
+    messages = Message.query.filter_by(chatroom=chatroom).all()
+
+    if "name" in session:
+        username = session["name"]
+        return render_template("chat.html", chatroom_name=chatroom_name, user_name=username, messagess=messages)
+    else:
+        return redirect(url_for("home"))
+
+@app.route("/chat/<chatroom_name>/save_message", methods=["POST"])
+def save_message(chatroom_name):
+    # Überprüfe, ob der Benutzer in der Sitzung (Session) vorhanden ist
+    if "name" not in session:
+        return redirect(url_for("home"))
+
+    # Extrahiere Benutzername und Nachrichteninhalt aus dem Formular
+    user_name = session["name"]
+    content = request.form.get("content")
+
+    # Überprüfe, ob die Nachricht nicht leer ist
+    if not content:
+        return redirect(url_for("chat", chatroom_name=chatroom_name))
+
+    # Suche den Chatroom und den Benutzer in der Datenbank
+    chatroom = Chatroom.query.filter_by(chatname=chatroom_name).first()
+    user = User.query.filter_by(username=user_name).first()
+
+    # Überprüfe, ob sowohl der Chatroom als auch der Benutzer gefunden wurden
+    if chatroom and user:
+        # Erstelle eine neue Nachricht und füge sie zur Datenbank hinzu
+        new_message = Message(content=content, user=user, user_name=user.username, chatroom=chatroom)
+        db.session.add(new_message)
+        db.session.commit()
+
+    # Leite den Benutzer zur Chatseite des entsprechenden Chatrooms weiter
+    return redirect(url_for("chat", chatroom_name=chatroom_name))
+
+
             
     
     

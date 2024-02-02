@@ -142,12 +142,64 @@ Halte die Taste "Strg" gedrückt und klicke mit dem Mauszeiger auf die ausgegebe
 
 **Actual User journey:**
 
-15. Zu aller erst erstellst du dir einen User-Account, durch Eingeben eines Namens und eines von dir selbst ausgewählten Passworts. Anschließend klickst du auf den SIGN IN Button!
+1. **Registrierung:**
 
-Nun sollte dein Account angelegt worden sein. Das erkennst du, wenn du die Rückmeldung "Benutzer wurde registriert" erhalten hast. Wenn du diese rückmeldung nicht erhalten hast, melde dich bitte beim Hersteller!
+- Gib einen Benutzernamen und ein Passwort deiner Wahl ein.
+- Klicke auf den "SIGN IN" Button, um deinen Account zu erstellen.
 
-16. Jetzt gibts du deine gespeicherten Daten noch einmal bitte ein und klickst nun auf den LOG IN Button!
+2. **Bestätigung der Registrierung:**
 
-Dann solltest du zur Homepage weitergeleitet werden.
+- Überprüfe, ob die Rückmeldung "Benutzer wurde registriert" angezeigt wird.
+- Falls keine Bestätigung erfolgt, melde dich beim Hersteller oder Support.
 
-17.  Hier werden dir nun alle vorhandenen Chatrooms angezeigt.
+
+3. **Anmeldung:**
+
+- Gib deinen Benutzernamen und das Passwort erneut ein.
+- Klicke auf den "LOG IN" Button.
+
+
+4. **Homepage:**
+
+- Nach erfolgreicher Anmeldung wirst du zur Homepage weitergeleitet.
+
+
+5. **Anzeige der Chatrooms:**
+
+- Auf der Homepage sollten alle verfügbaren Chatrooms angezeigt werden.
+- Durchsuche die Liste und wähle einen Chatroom aus, um am Gespräch teilzunehmen.
+
+
+6. **Chatroom-Zugang:**
+
+- Durch das Anklicken des gewünschten Chatrooms gelangst du in den Chatraum.
+
+
+7. **Teilnahme am Chat:**
+
+- Innerhalb des Chatrooms kannst du deine Meinungen und Gefühle zu diesem Anime mit anderen Benutzern teilen.
+- Schreibe deine Nachrichten, Kommentare oder Fragen in das Chatfenster und sende sie ab.
+
+
+8. **Erstellen eines Chatrooms für einen neuen Anime:**
+
+- Wenn für einen bestimmten Anime noch kein Chatroom vorhanden ist, navigiere zur Option "Create Chatroom".
+- Gib den Namen des Animes und lade ein Profilbild für den Chatroom hoch.
+- Beachte, dass das hochgeladene Bild nachträglich nicht geändert werden kann.
+
+
+9. **Bestätigung der Chatroom-Erstellung:**
+
+- Überprüfe, ob der neu erstellte Chatroom nun in der Liste der verfügbaren Chatrooms erscheint.
+
+10. **Erstellter Chatroom wird nicht angezeigt:**
+
+- Kontaktiere den Support über den Reiter "Contact Us"
+
+11. **Du willst mehr über AnimeSphere erfahren?:**
+
+- Klicke auf den Reiter "About AnimeSphere"
+
+12. **Ausloggen**
+
+- Logge dich aus, durch das klicken auf den "Log-out Button"

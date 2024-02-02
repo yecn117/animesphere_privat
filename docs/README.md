@@ -45,7 +45,7 @@ Ich hoffe mir nach Abschluss des Projektes im Bereich Programmierung von Web-App
 
 **LUKA: Suchfunktion (Suche nach Chatroom) und Datenbank**
 
-........................................................
+...
 
 **YAKUB: Log-in System und die Create Chatroom- und Chat-Funktion**
 
@@ -61,3 +61,5 @@ Alle aufgeführten Funktionen unterliegen dem Initial Release der App.
 
 
 **Einfache User Jorney:**
+
+Step1: Kopiere den Repository-Link. Öffne das Tool

@@ -2,7 +2,7 @@
 **Team 6: AnimeSphere**
 
 Team-Mitglieder: Yakub Ercan und Luka Poljic 
-
+12
 
 **value proposition:**
 AnimeSphere ist der ideale Ort, um in privaten Gesprächen mit Freunden und Unbekannten in die Welt der Anime einzutauchen. Tauche ein in die endlose Vielfalt der Anime-Sphere, diskutiere über deine Lieblingsserien und teile deine Leidenschaft für diese faszinierende Form der Unterhaltung. Egal, ob du über Klassiker, die neuesten Veröffentlichungen oder Geheimtipps sprechen möchtest, AnimeSphere bietet dir die perfekte Plattform, um gemeinsam mit Gleichgesinnten über die Abenteuer, Emotionen und Geschichten in der Welt der Anime zu plaudern. Und nicht zu vergessen, für jeden einzelnen Anime gibt es hier auch einen eigenen Chatroom. Trete ein und lass die Anime-Gespräche beginnen!

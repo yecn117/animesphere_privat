@@ -9,7 +9,7 @@ nav_order: 3
 # [Design decisions]
 {: .no_toc }
 
-<details open markdown="block">
+<details open markdown="block">nte
 {: .text-delta }
 <summary>Table of contents</summary>
 + ToC

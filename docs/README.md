@@ -202,4 +202,4 @@ Halte die Taste "Strg" gedrückt und klicke mit dem Mauszeiger auf die ausgegebe
 
 12. **Ausloggen**
 
-- Logge dich aus, durch das klicken auf den "Log-out Button"
+- Logge dich aus, durch das klicken auf den "Log-out Buttonn"

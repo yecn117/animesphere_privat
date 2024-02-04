@@ -19,4 +19,9 @@
     max-height: calc(100vh - 100px);
     overflow-y: auto;
   }
-  
+
+.navbar-brand {
+    display: flex; 
+    justify-content: center; 
+    width: 100%; 
+}

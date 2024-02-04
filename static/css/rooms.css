@@ -189,7 +189,7 @@ h2{
 
 .chatrooms-container {
     position: absolute;
-    top: 450px;
+    top: calc(350px + 80px + 20px);
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
@@ -262,5 +262,11 @@ h2{
 
   .nav input[type=text] {
       border: 1px solid #ccc;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .chatrooms-container {
+      top: calc(365px + 80px + 30px); /* Erhöhter Abstand für größere Bildschirmbreite */
   }
 }

@@ -169,6 +169,8 @@ def create_room():
     db.session.add(new_chatroom)
     db.session.commit()
 
+    
+
     flash("Chatroom erfolgreich erstellt!", "success")
     return redirect(url_for("rooms"))
 

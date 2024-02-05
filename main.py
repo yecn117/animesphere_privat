@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, session, redirect, url_for, f
 from flask_socketio import join_room, leave_room, send, SocketIO
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+import pytz
+from pytz import timezone
 from werkzeug.utils import secure_filename
 import os
 from sqlalchemy import func, or_
@@ -180,6 +182,15 @@ def chat(chatroom_name):
     chatroom = Chatroom.query.filter_by(chatname=chatroom_name).first()
     messages = Message.query.filter_by(chatroom=chatroom).all()
 
+    berlin_tz = pytz.timezone('Europe/Berlin')
+
+    for msg in messages:
+        # Stelle sicher, dass created_at eine Zeitzone hat, bevor du konvertierst
+        if msg.created_at.tzinfo is None:
+            # Annahme: Die Zeit in der Datenbank ist UTC
+            msg.created_at = msg.created_at.replace(tzinfo=pytz.utc)
+        msg.created_at = msg.created_at.astimezone(berlin_tz)
+
     if "name" in session:
         username = session["name"]
         return render_template("chat.html", chatroom_name=chatroom_name, user_name=username, messagess=messages)
@@ -196,18 +207,22 @@ def save_message(chatroom_name):
     user_name = session["name"]
     content = request.form.get("content")
 
-    # Überprüfe, ob die Nachricht nicht leer ist
+    # Überprüft, ob die Nachricht nicht leer ist
     if not content:
         return redirect(url_for("chat", chatroom_name=chatroom_name))
+    
+    # gewünschte Zeitzone
+    berlin_tz = pytz.timezone('Europe/Berlin')
+    berlin_datetime = datetime.now(berlin_tz)
 
-    # Suche den Chatroom und den Benutzer in der Datenbank
+    # Sucht den Chatroom und den Benutzer in der Datenbank
     chatroom = Chatroom.query.filter_by(chatname=chatroom_name).first()
     user = User.query.filter_by(username=user_name).first()
 
     # Überprüfe, ob sowohl der Chatroom als auch der Benutzer gefunden wurden
     if chatroom and user:
         # Erstelle eine neue Nachricht und füge sie zur Datenbank hinzu
-        new_message = Message(content=content, user=user, user_name=user.username, chatroom=chatroom)
+        new_message = Message(content=content, user=user, user_name=user.username, chatroom=chatroom, created_at=berlin_datetime)
         db.session.add(new_message)
         db.session.commit()
 

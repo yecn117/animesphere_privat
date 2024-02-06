@@ -8,6 +8,7 @@ from werkzeug.utils import secure_filename
 import os
 from sqlalchemy import func, or_
 from werkzeug.security import check_password_hash, generate_password_hash
+from flask import jsonify
 
 
 
@@ -225,6 +226,7 @@ def save_message(chatroom_name):
         new_message = Message(content=content, user=user, user_name=user.username, chatroom=chatroom, created_at=berlin_datetime)
         db.session.add(new_message)
         db.session.commit()
+    
 
     # Leite den Benutzer zur Chatseite des entsprechenden Chatrooms weiter
     return redirect(url_for("chat", chatroom_name=chatroom_name))

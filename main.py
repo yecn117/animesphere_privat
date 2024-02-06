@@ -9,6 +9,7 @@ import os
 from sqlalchemy import func, or_
 from werkzeug.security import check_password_hash, generate_password_hash
 from flask import jsonify
+import random
 
 
 
@@ -232,7 +233,13 @@ def save_message(chatroom_name):
     return redirect(url_for("chat", chatroom_name=chatroom_name))
 
 
-            
+@app.route('/random-images')
+def random_images():
+    images_dir = os.path.join(app.static_folder, 'images')
+    images = os.listdir(images_dir)
+    random_images = random.sample(images, 2)  # Wähle 2 zufällige Bilder aus
+    image_paths = [os.path.join('images', image) for image in random_images]
+    return jsonify(image_paths)       
     
     
 if __name__ == "__main__":

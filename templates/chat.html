@@ -12,14 +12,15 @@
 
 <body>
     
-  <nav class="navbar bg-body-tertiary">
+  <nav class="navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">{{ chatroom_name }}</a>
     </div>
   </nav>
   
   <div class="side-pic">
-    
+    <img class="random-image left" src="" alt="Beschreibung des Bildes">
+    <img class="random-image right" src="" alt="Beschreibung des Bildes">
   </div>
   
   <div class="container">
@@ -75,6 +76,30 @@
 
    // Rufe scrollToBottom auf, wenn die Seite fertig geladen ist
    window.onload = scrollToBottom;
+
+
+   function setRandomImages(images) {
+    var imgElements = document.querySelectorAll('.random-image');
+    imgElements.forEach(function(imgElement) {
+        var randomIndex = Math.floor(Math.random() * images.length);
+        imgElement.src = images[randomIndex];
+    });
+}
+
+var images = [
+    "{{ url_for('static', filename='img/random-pic/random1.jpg') }}",
+    "{{ url_for('static', filename='img/random-pic/random2.jpg') }}",
+    "{{ url_for('static', filename='img/random-pic/random3.jpg') }}",
+    "{{ url_for('static', filename='img/random-pic/random4.jpg') }}",
+    "{{ url_for('static', filename='img/random-pic/random5.jpg') }}"
+];
+
+setRandomImages(images);
+
+setInterval(function() {
+    setRandomImages(images);
+}, 60000); // Bilder alle 60 Sekunden aktualisieren
+
 
   </script>
 

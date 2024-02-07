@@ -42,6 +42,8 @@
 .contact-section{
   background-color: rgba(0,0,0,0.8);
   padding: 30px 200px;
+  margin-top: 350px;
+  border-radius: 15px;
 }
 
 .contact-heading h2 {
@@ -119,10 +121,15 @@
 .btn-primary {
   background-color: #007bff;
   color: #fff;
+  transition: 0.2s ease-in-out;
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: green;
 }
 
 

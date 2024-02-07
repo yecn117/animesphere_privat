@@ -16,19 +16,17 @@ nav_order: 0
 
 ### [Yakub Ercan]
 
-About
-: Some info about Yakub
+20 years old
 
 Matr.-Nr.
-: 1234567
+: 77211933011
 
 ### [Luka Poljic]
 
-About
-: Some info about Luka
+21 years old
 
 Matr.-Nr.
-: 1234567
+: 77211933639
 
 ## Eidesstattliche Erklärung
 

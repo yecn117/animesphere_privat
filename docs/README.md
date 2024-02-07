@@ -2,7 +2,6 @@
 **Team 6: AnimeSphere**
 
 Team-Mitglieder: Yakub Ercan und Luka Poljic 
-12
 
 **value proposition:**
 AnimeSphere ist der ideale Ort, um in privaten Gesprächen mit Freunden und Unbekannten in die Welt der Anime einzutauchen. Tauche ein in die endlose Vielfalt der Anime-Sphere, diskutiere über deine Lieblingsserien und teile deine Leidenschaft für diese faszinierende Form der Unterhaltung. Egal, ob du über Klassiker, die neuesten Veröffentlichungen oder Geheimtipps sprechen möchtest, AnimeSphere bietet dir die perfekte Plattform, um gemeinsam mit Gleichgesinnten über die Abenteuer, Emotionen und Geschichten in der Welt der Anime zu plaudern. Und nicht zu vergessen, für jeden einzelnen Anime gibt es hier auch einen eigenen Chatroom. Trete ein und lass die Anime-Gespräche beginnen!
@@ -43,11 +42,11 @@ Ich hoffe mir nach Abschluss des Projektes im Bereich Programmierung von Web-App
 **Aufteilung der Projektarbeit**
 
 
-**LUKA: Suchfunktion (Suche nach Chatroom), LOG-OUT und Datenbank ()**
+**LUKA: Suchfunktion (Suche nach Chatroom), LOG-OUT, Kontaktanfrage, Datenbank und Design**
 
 ...
 
-**YAKUB: LOG und SIGN-IN System, Create Chatroom- und Chat-Funktion**
+**YAKUB: LOG und SIGN-IN System, Create Chatroom- und Chat-Funktion und Design**
 
 Hinsichtlich dem Log-in System werden wir uns für das herkömmliche Einlogsystem entscheiden, denn das ist den meisten bekannt und führt dementsprechend zu weniger Verwirrung. Dazu hat der User erstmals die Möglichkeit durch Eigeben von Username und Passwort und Klicken des Sign-in Button sich ein Account zu erstellen.
 Darauffollgend sollte er sich dann durch erneute Eingabe seiner Daten und KLicken des Log-in Button sich einloggen können. Sollten sich Fehler bei der Anmeldung ergeben, wird der User mit passenden Benachrichtigungen darüber informiert.
@@ -60,89 +59,7 @@ Alle aufgeführten Funktionen unterliegen dem Initial Release der App.
 
 
 
-**Einfache User Jorney:**
-
-Die User Journey teilt sich in 2 Anleitungen. Du kannst, je nach Wissensstand entscheiden mit wie du beginnst!
-
-Die Schritte 1 bis 14 umfassen den Vorgang alle Vorrausetzungen zu erfüllen, um die Anwendung zu öffnen.
-
-Ab Schritt 15 wird die eigentliche User Journey beschrieben.
-
-Viel Spass!
-
-**Wichtig!**
-Falls du schon Github, Git und VSC auf deinem Rechner installiert hast, dann kannst du die ersten 3 Schritte überspringen.
-
-1. **GitHub-Account erstellen (falls noch nicht vorhanden):**
-
-Gehe auf die GitHub-Website.
-Klicke auf "Sign up" und folge den Anweisungen, um einen neuen GitHub-Account zu erstellen.
-
-
-2. **Git installieren (falls noch nicht vorhanden):**
-
-Lade Git von der offiziellen Git-Website herunter und installiere es auf deinem Computer.
-
-Gegebenfalls Benutzername und Email im Git-Terminal angeben.
-
-3. **Visual Studio Code installieren (falls noch nicht vorhanden):**
-
-Lade Visual Studio Code von der offiziellen Website herunter und installiere es.
-
-4. **GitHub-Repository-Link erhalten:**
-
-Jemand sendet dir den Link zum GitHub-Repository. Es sieht in etwa so aus: "https://github.com/Benutzer/Repo.git".
-
-5. **Ordner für das Repository erstellen:**
-
-Erstelle auf deinem Computer einen Ordner, in dem du das Repository speichern möchtest.
-
-6. **Visual Studio Code öffnen:**
-
-Starte Visual Studio Code.
-
-7. **Terminal in VS Code öffnen:**
-
-Klicke oben im VS Code-Fenster auf "View" und wähle "Terminal", um das integrierte Terminal zu öffnen.
-
-8. **Zum gewünschten Verzeichnis wechseln:**
-
-Navigiere mit dem Terminal zum Ordner, den du für das Repository erstellt hast, mit dem Befehl "cd Pfad/zum/Ordner".
-
-9. **Repository klonen:**
-
-Verwende den Befehl "git clone" gefolgt von der Repository-URL:
-
-"git clone https://github.com/Benutzer/Repo.git"
-
-10. **In den Repository-Ordner wechseln:**
-
-Wechsle mit dem Befehl "cd Repo" in den Ordner des geklonten Repositories.
-
-11. **Virtual Environment erstellen:**
-
-Wenn der env-Ordner bereits im Repository vorhanden ist, aktiviere das virtuelle Umgebungsmodul mit dem Befehl (für Windows):
-
-".\env\Scripts\activate"
-
-Oder für macOS/Linux:
-
-"source env/bin/activate"
-
-12. **Abhängigkeiten installieren:**
-
-Führe den Befehl "pip install -r requirements.txt" aus, um die erforderlichen Python-Abhängigkeiten zu installieren.
-
-13. **Flask-Anwendung starten:**
-
-Starte die Flask-Anwendung mit dem Befehl:  "python main.py"
-
-14. **Öffne die Anwendung im Browser:**
-
-Halte die Taste "Strg" gedrückt und klicke mit dem Mauszeiger auf die ausgegebe URL, welche normalerweise folgendermaßen ausschaut: "http://localhost:5000"
-
-
-**Actual User journey:**
+**User journey:**
 
 15. **Registrierung:**
 
@@ -202,4 +119,4 @@ Halte die Taste "Strg" gedrückt und klicke mit dem Mauszeiger auf die ausgegebe
 
 27. **Ausloggen**
 
-- Logge dich aus, durch das klicken auf den "Log-out Buttonn"
+- Logge dich aus, durch das klicken auf den "Log-out Button"

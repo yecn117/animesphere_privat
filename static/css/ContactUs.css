@@ -133,7 +133,7 @@
   background-color: green;
 }
 
-.flash-messages{
+.success{
   color: rgb(0, 0, 0);
   display: flex;
   justify-content: center;

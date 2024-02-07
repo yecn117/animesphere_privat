@@ -267,9 +267,11 @@ def submit_support_request():
             db.session.add(new_support_request)
             db.session.commit()
             
-            # Feedback an den Benutzer
-            flash('Your support request has been submitted successfully.')
-            return redirect(url_for('ContactUs'))
+            # Erfolgsmeldung an den Benutzer
+            success_message = 'Your support request has been submitted successfully.'
+    # Für den Fall, dass die Methode nicht POST ist, leiten Sie einfach zur Kontaktseite um
+    return redirect(url_for('ContactUs', success_message=success_message))
+
 
 
 if __name__ == "__main__":

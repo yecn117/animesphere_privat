@@ -82,11 +82,12 @@
 </div>
 
 {% if error %}
-        <p class="error">{{ error }}</p>
-    {% endif %}
-    {% if message %}
-        <p class="flash-messages">{{ message }}</p>
-    {% endif %}
+    <p class="error">{{ error }}</p>
+{% endif %}
+{% if success_message %}
+    <p class="success">{{ success_message }}</p>
+{% endif %}
+
 
 </section>
 

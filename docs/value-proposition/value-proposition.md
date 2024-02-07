@@ -17,16 +17,24 @@ nav_order: 1
 </details>
 
 ## [The problem]
+The problem that AnimeSphere tackles is the simple desire for human connection and the current shallow and, at times, difficult communication about anime within the anime community.
 
+People who enjoy their favorite anime like to share their enthusiasm for this medium. It is human nature to want to talk about things that we adore and enjoy. Often, this can be a challenge. In-person friends will often have different tastes or may not have seen the same anime, which is natural after all. As a result, people then flock to the internet to discuss the specific anime they want to talk about. What they often find is more of the same. Social media platforms tend not to be concentrated on the same anime, and there are rarely focused discussions, at most, they are very shallow. People online will often be talking about multiple anime broadly, creating a difficulty in talking about specific anime in a meaningful manner. This happens, in particular, for niche, small anime, where it becomes very difficult to find a community to talk about it.
+
+Human connection and interaction are something that all people desire. The quickest way to achieve that is through shared interests and likes. People want to discuss what they enjoy and build friendships on those bases. For that to succeed, a compatible taste in anime has to be there. If that is the case, a genuine connection can blossom.
 ## [Our solution]
+The solutin is the AnimeSphere. The AnimeSphere is focused on giving People the opprutinty to talk about Anime in curated Chatrooms on speicfic Anime. The hassle and difficulties of The Social Media Plattform is not a issue since the Nature of Chatrooms creates a focused and centered Space to talk about Anime. Each Anime gets its own Chatroom where people can talk with each other about that Anime. If there is a niche Anime through the Search-Bar it can be found and if it doesnt yet exist The users themself can create Chatrooms of their favroite Anime. 
+AnimeSphere is a Platform for Users to share their joy for their favroite Anime with like minded people. The need to talk about ones favroite Anime is met by the AnimeSphere. Everyone can share their thoughts and opinions and listen to others do the same. In that Anime can be used as A Building Block for Interaction and Kinship. People get the Opprutinty to talk to people who like the same ANime as they do. Friendships can begin throug that. 
+vllt. noch mehr hinschreiben
 
 ## [Target user]
-The Target users are based on the Problems that it can solve for the people using the AnimeSphere. We have Personas of People who would use the AnimeSphere.
+
+The Target users are based on the Problems that it can solve for the people using the AnimeSphere.  The Target User of AnimeSphere can be incredible diverse. They can come from all walks of life but with a tendency for a younger audience between 14-25 years. With teenagers and young adults Anime is the second most popular entertainment format on television. (Bachlorarbeit s9) The common thing about the user of AnimeSphere is a pation for Anime and the desire to share the experinces. A users of AnimeSphere tends to be tech-savvy and use the Internet for Social Interaction. We have Personas of People who would use the AnimeSphere.
 
 Persona 1:
 - Name: Florian
-- Age: 22
-- Gender: Mann
+- Age: 18
+- Gender: Male
 - Marital Status: Single
 - Occupation: Student
 

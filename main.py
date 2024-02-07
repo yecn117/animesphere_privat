@@ -51,7 +51,12 @@ class Message(db.Model):
     chatroom = db.relationship('Chatroom', backref=db.backref('messages', lazy=True), foreign_keys=[chatroom_id])
     
 
-
+class Support(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(200), nullable=False)
+    email = db.Column(db.String(200), nullable=False)
+    subject = db.Column(db.String(255), nullable=False)
+    message = db.Column(db.String(500), nullable=False)
 
 
 with app.app_context():
@@ -67,7 +72,7 @@ def home():
         action = request.form.get("action")
 
         if not username or not password:
-            return render_template("home.html", error="Bitte trage sowohl Benutzernamen als auch Passwort ein!", username=username)
+            return render_template("home.html", error="Please enter user name and password!", username=username)
 
         existing_user = User.query.filter_by(username=username).first()
 
@@ -78,16 +83,16 @@ def home():
                 new_user = User(username=username, password=hashed_password)
                 db.session.add(new_user)
                 db.session.commit()
-                return render_template("home.html", message="Dein Benutzer wurde registriert!", username=username)
+                return render_template("home.html", message="Your user has been registered!", username=username)
             else:
-                return render_template("home.html", error="Dieser Benutzername existiert bereits!", username=username)
+                return render_template("home.html", error="This username already exists!", username=username)
 
         elif action == "log_in":
             if existing_user and check_password_hash(existing_user.password, password):
                 session["name"] = username
                 return redirect(url_for("rooms"))
             else:
-                return render_template("home.html", error="Benutzername oder Passwort ist falsch!", username=username)
+                return render_template("home.html", error="Username or password is incorrect!", username=username)
 
     return render_template("home.html")
 
@@ -100,7 +105,6 @@ def home():
 def rooms():
     if "name" in session:
         username = session["name"]
-        welcome_message = f"Willkommen, {username}!"
 
         # Holen Sie alle Chatrooms
         chatrooms = Chatroom.query.all()
@@ -113,11 +117,11 @@ def rooms():
 
         # Überprüfen, ob Suchergebnisse vorhanden sind
         if not chatrooms:
-            no_results_message = "Keine Chatrooms gefunden!"
+            no_results_message = "No chatrooms found!"
         else:
             no_results_message = None
 
-        return render_template("rooms.html", welcome_message=welcome_message, chatrooms=chatrooms, no_results_message=no_results_message)
+        return render_template("rooms.html", chatrooms=chatrooms, no_results_message=no_results_message)
     else:
         return redirect(url_for("home"))
     
@@ -138,7 +142,7 @@ def normalize_chatname(chatname):
 def create_room():
 
     if Chatroom.query.count() >= 100:
-        flash("Es können nicht mehr als 100 Chatrooms erstellt werden.", "error")
+        flash("No more than 100 chat rooms can be created.", "error")
         return redirect(url_for("rooms"))
     
     chatname = request.form.get("chatname")
@@ -147,18 +151,18 @@ def create_room():
     image = request.files.get("image")
 
     if not chatname or not image:
-        flash("Bitte fülle alle Felder aus.", "error")
+        flash("Please fill in all fields.", "error")
         return redirect(url_for("rooms"))
 
     if not allowed_file(image.filename):
-        flash("Ungültige Dateiendung. Erlaubt sind: png, jpg, jpeg, gif", "error")
+        flash("Invalid file extension. Allowed are: png, jpg, jpeg, gif", "error")
         return redirect(url_for("rooms"))
 
     # Überprüfe, ob ein Chatroom mit dem normalisierten Namen bereits existiert
     existing_chatroom = Chatroom.query.filter(func.lower(Chatroom.chatname) == normalized_chatname).first()
 
     if existing_chatroom:
-        flash("Einen Chatroom zu diesem Anime existiert bereits!", "error")
+        flash("A chatroom for this anime already exists!", "error")
         return redirect(url_for("rooms"))
     
 
@@ -175,7 +179,7 @@ def create_room():
 
     
 
-    flash("Chatroom erfolgreich erstellt!", "success")
+    flash("Chatroom created successfully!", "success")
     return redirect(url_for("rooms"))
 
 
@@ -241,6 +245,32 @@ def random_images():
     image_paths = [os.path.join('images', image) for image in random_images]
     return jsonify(image_paths)       
     
-    
+
+
+@app.route('/submit_support_request', methods=['POST'])
+def submit_support_request():
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        subject = request.form['subject']
+        message = request.form['message']
+        
+        # Überprüfen, ob alle Felder ausgefüllt sind
+        if not name or not email or not subject or not message:
+            error = 'All fields are required.'
+            return render_template('ContactUs.html', error=error)
+        else:
+            # Erstellen eines neuen Support-Eintrags
+            new_support_request = Support(name=name, email=email, subject=subject, message=message)
+            
+            # Hinzufügen und Speichern in der Datenbank
+            db.session.add(new_support_request)
+            db.session.commit()
+            
+            # Feedback an den Benutzer
+            flash('Your support request has been submitted successfully.')
+            return redirect(url_for('ContactUs'))
+
+
 if __name__ == "__main__":
     socketio.run(app, debug=True)

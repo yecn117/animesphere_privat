@@ -12,35 +12,43 @@
 
 <body>
     
-  <nav class="navbar bg-body-tertiary">
+  <nav class="navbar">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Mein Chat-Messenger</a>
+      <a class="navbar-brand" href="#">{{ chatroom_name }}</a>
     </div>
   </nav>
   
+  <div class="side-pic">
+    <img class="random-image left" src="" alt="Beschreibung des Bildes">
+    <img class="random-image right" src="" alt="Beschreibung des Bildes">
+  </div>
   
   <div class="container">
-    {% for msg in messagess %}
-    <div class="message-container d-flex {% if user_name == msg.user_name %} justify-content-end {% else %} justify-content-start {% endif %} mt-3">
-      <div class="card">
-        <div class="card-body">
-          <b>{{msg.user_name}}:</b>
-          {{msg.content}}
-          <span class="msg-date">{{msg.created_at.strftime('%d.%m.%Y %H:%M') }}</span>
+
+      <div class="message-container">
+        {% for msg in messagess %}
+        <div class="d-flex {% if user_name == msg.user_name %} justify-content-end {% else %} justify-content-start {% endif %} mt-3">
+          <div class="card">
+            <div class="card-body">
+              <b>{{msg.user_name}}:</b>
+              {{msg.content}}
+              <span class="msg-date">{{msg.created_at.strftime('%d.%m.%Y %H:%M') }}</span>
+            </div>
+          </div>
         </div>
-      </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-  
-    <form class="input-group mb-3 my-form" action="{{ url_for('save_message', chatroom_name=chatroom_name) }}" method="POST">
-      <input type="text" id="message-input" name="content" class="form-control" placeholder="Nachricht..." >
-      <button class="btn btn-outline-secondary" type="submit" id="button-addon2" onclick="removeFocus(); goBackToRooms();">Senden</button>
-    </form>
+
+    <div class="input-container mt-3">
+      <form class="input-group mb-3 my-form" action="{{ url_for('save_message', chatroom_name=chatroom_name) }}" method="POST">
+        <input type="text" id="message-input" name="content" class="form-control" placeholder="Nachricht..." >
+        <button class="btn btn-outline-secondary" type="submit" id="button-addon2" onclick="removeFocus(); goBackToRooms();">Senden</button>
+      </form>
+    </div>
+
   </div>
+
   
-  <div class="content">
-    {% block content %} {% endblock %}
-  </div>
 
   <script>
     // Funktion, um den Fokus vom Eingabebereich zu entfernen
@@ -53,6 +61,46 @@
       window.history.pushState({}, document.title, "{{ url_for('rooms') }}");
       window.location.replace("{{ url_for('rooms') }}");
     }
+
+    function scrollToBottom() {
+    // Scrollt den Nachrichtencontainer nach unten
+    var messagesContainer = document.querySelector('.message-container'); // Ersetze '.message-container' mit der tatsächlichen Klasse oder ID deines Nachrichtencontainers
+    
+    if (messagesContainer) {
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    // Scrollt die gesamte Webseite nach unten
+    window.scrollTo(0, document.body.scrollHeight);
+    }
+
+   // Rufe scrollToBottom auf, wenn die Seite fertig geladen ist
+   window.onload = scrollToBottom;
+
+
+   function setRandomImages(images) {
+    var imgElements = document.querySelectorAll('.random-image');
+    imgElements.forEach(function(imgElement) {
+        var randomIndex = Math.floor(Math.random() * images.length);
+        imgElement.src = images[randomIndex];
+    });
+}
+
+var images = [
+    "{{ url_for('static', filename='img/random-pic/random1.jpg') }}",
+    "{{ url_for('static', filename='img/random-pic/random2.jpg') }}",
+    "{{ url_for('static', filename='img/random-pic/random3.jpg') }}",
+    "{{ url_for('static', filename='img/random-pic/random4.jpg') }}",
+    "{{ url_for('static', filename='img/random-pic/random5.jpg') }}"
+];
+
+setRandomImages(images);
+
+setInterval(function() {
+    setRandomImages(images);
+}, 60000); // Bilder alle 60 Sekunden aktualisieren
+
+
   </script>
 
 </body>

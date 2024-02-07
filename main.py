@@ -2,10 +2,14 @@ from flask import Flask, render_template, request, session, redirect, url_for, f
 from flask_socketio import join_room, leave_room, send, SocketIO
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+import pytz
+from pytz import timezone
 from werkzeug.utils import secure_filename
 import os
 from sqlalchemy import func, or_
 from werkzeug.security import check_password_hash, generate_password_hash
+from flask import jsonify
+import random
 
 
 
@@ -169,6 +173,8 @@ def create_room():
     db.session.add(new_chatroom)
     db.session.commit()
 
+    
+
     flash("Chatroom erfolgreich erstellt!", "success")
     return redirect(url_for("rooms"))
 
@@ -177,6 +183,15 @@ def create_room():
 def chat(chatroom_name):
     chatroom = Chatroom.query.filter_by(chatname=chatroom_name).first()
     messages = Message.query.filter_by(chatroom=chatroom).all()
+
+    berlin_tz = pytz.timezone('Europe/Berlin')
+
+    for msg in messages:
+        # Stelle sicher, dass created_at eine Zeitzone hat, bevor du konvertierst
+        if msg.created_at.tzinfo is None:
+            # Annahme: Die Zeit in der Datenbank ist UTC
+            msg.created_at = msg.created_at.replace(tzinfo=pytz.utc)
+        msg.created_at = msg.created_at.astimezone(berlin_tz)
 
     if "name" in session:
         username = session["name"]
@@ -194,26 +209,37 @@ def save_message(chatroom_name):
     user_name = session["name"]
     content = request.form.get("content")
 
-    # Überprüfe, ob die Nachricht nicht leer ist
+    # Überprüft, ob die Nachricht nicht leer ist
     if not content:
         return redirect(url_for("chat", chatroom_name=chatroom_name))
+    
+    # gewünschte Zeitzone
+    berlin_tz = pytz.timezone('Europe/Berlin')
+    berlin_datetime = datetime.now(berlin_tz)
 
-    # Suche den Chatroom und den Benutzer in der Datenbank
+    # Sucht den Chatroom und den Benutzer in der Datenbank
     chatroom = Chatroom.query.filter_by(chatname=chatroom_name).first()
     user = User.query.filter_by(username=user_name).first()
 
     # Überprüfe, ob sowohl der Chatroom als auch der Benutzer gefunden wurden
     if chatroom and user:
         # Erstelle eine neue Nachricht und füge sie zur Datenbank hinzu
-        new_message = Message(content=content, user=user, user_name=user.username, chatroom=chatroom)
+        new_message = Message(content=content, user=user, user_name=user.username, chatroom=chatroom, created_at=berlin_datetime)
         db.session.add(new_message)
         db.session.commit()
+    
 
     # Leite den Benutzer zur Chatseite des entsprechenden Chatrooms weiter
     return redirect(url_for("chat", chatroom_name=chatroom_name))
 
 
-            
+@app.route('/random-images')
+def random_images():
+    images_dir = os.path.join(app.static_folder, 'images')
+    images = os.listdir(images_dir)
+    random_images = random.sample(images, 2)  # Wähle 2 zufällige Bilder aus
+    image_paths = [os.path.join('images', image) for image in random_images]
+    return jsonify(image_paths)       
     
     
 if __name__ == "__main__":

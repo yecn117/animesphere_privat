@@ -1,22 +1,91 @@
-.my-form{
-    position: fixed;
-    bottom: 25px;
-    right: 80px;
-    left: 80px;
-    width: calc(100% - 160px);
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: rgb(172, 172, 172);
 }
 
-.msg-date{
-      font-size: 10px;
-      position: absolute;
-      bottom: 4px;
-      right: 4px;
-      color: rgb(0, 0, 0, 0.5);
+.message-container::-webkit-scrollbar {
+    display: none; /* Versteckt die Scrollleisten für den Nachrichtencontainer und die gesamte Seite */
+}
 
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background-color: gray;
+    border: 5px solid black;
+}
+
+.navbar-brand{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    font-family: fantasy;
+    font-size: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Änderung von 80vh auf 100vh, um den gesamten Viewport-Höhe zu nutzen */
+    padding-bottom: 55px; /* Platz für das Eingabefeld lassen */
+    
+}
+
+.random-image{
+    position: fixed;
+    top: 115px;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 150px;
+    height: 700px;
+    width: 300px;
+}
+
+.side-pic .left{
+    left: 0;
+}
+
+.side-pic .right{
+    right: 0;
 }
 
 .message-container {
-    max-height: calc(100vh - 100px);
-    overflow-y: auto;
-  }
-  
+    flex-grow: 1; /* Nimmt den verfügbaren Platz ein */
+    overflow-y: auto; /* Ermöglicht das vertikale Scrollen, falls viele Nachrichten vorhanden sind */
+    margin: 1rem 0; /* Fügt oben und unten einen Rand hinzu */
+    z-index: 0;
+    margin-top: 75px;
+}
+
+.input-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45px; /* Höhe des Formulars */
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    z-index: 2;
+    background-color: rgb(110, 110, 110);
+    border: 5px solid black;
+}
+
+.btn{
+    background-color: white;
+}
+
+.my-form {
+    bottom: 20px;
+}
+
+.msg-date {
+    font-size: 10px;
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+

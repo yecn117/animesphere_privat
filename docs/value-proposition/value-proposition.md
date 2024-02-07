@@ -63,7 +63,7 @@ The reason these users would choose AnimeSphere as their primary place to do thi
 ## [Customer journey]
 
 
-![Alt-Text](img/Customer Journey.png "Customer Journey")
+![Alt-Text](Customer Journey.png "Customer Journey")
 
 
 **Einfache User Jorney:**

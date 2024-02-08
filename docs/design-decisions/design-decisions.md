@@ -74,7 +74,7 @@ Das Ziel besteht darin, geeignete Technologien für die Entwicklung der Benutzer
 
  Wir fokussierten uns auf die Implementierung einer sicheren und benutzerfreundlichen Authentifizierungsmethode unter Verwendung von Passwort-Hashing mit pbkdf2:sha256. Diese Entscheidung basierte auf dem Bedürfnis, ein hohes Sicherheitsniveau zu gewährleisten, indem Nutzerpasswörter sicher gespeichert werden, was besonders in der heutigen Zeit, in der Datenschutz und Sicherheit von größter Bedeutung sind, unerlässlich ist. Die Wahl fiel auf eine Balance zwischen robuster Sicherheit und effizienter Performance, ohne dabei die Benutzererfahrung zu beeinträchtigen. Indem nur gehashte Passwörter gespeichert werden, schützen wir Nutzerdaten effektiv vor potenziellen Datenlecks. Gleichzeitig bleibt das System durch die effiziente Implementierung in Python und SQLite reaktionsschnell und skalierbar. Diese Strategie lässt Raum für zukünftige Erweiterungen, wie beispielsweise die Einführung einer Zwei-Faktor-Authentifizierung, ohne die Notwendigkeit, die Grundarchitektur der Anwendung umfassend zu überarbeiten.
 
- Entschieden von Luka
+ Entschieden von Yakub
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -82,11 +82,17 @@ Das Ziel besteht darin, geeignete Technologien für die Entwicklung der Benutzer
 
 Die Entscheidung zur Strukturierung der Datenbank, trotz der Vorgabe durch den Lehrer, SQLite zu verwenden, basierte auf der Notwendigkeit, eine effiziente und logisch kohärente Organisation der Daten zu gewährleisten, die die Funktionalitäten der Chat-App optimal unterstützt. Durch die Einteilung in vier Haupttabellen – User, Chatroom, Message und Support – wurde eine klare Trennung der verschiedenen Datenkategorien erreicht, die sowohl die Datenintegrität als auch die Abfrageeffizienz verbessert. Die User-Tabelle ermöglicht die eindeutige Identifikation der Benutzer, während die Chatroom-Tabelle die Grundlage für die Erstellung und Verwaltung verschiedener Chaträume bietet. Die Message-Tabelle bildet das Herzstück der Kommunikation, indem sie Nachrichten den entsprechenden Benutzern und Chaträumen zuordnet. Die Support-Tabelle schließlich dient der Verwaltung von Nutzeranfragen, was für die Nutzerbetreuung und das Feedbackmanagement essenziell ist. Diese Strukturierung unterstützt nicht nur die grundlegenden Anforderungen der App, wie Benutzerauthentifizierung, Nachrichtenübermittlung und Supportanfragen, sondern ist auch flexibel genug, um zukünftige Erweiterungen und Funktionalitäten zu integrieren. Die Entscheidung, trotz der Vorgabe von SQLite, eine solche detaillierte und durchdachte Datenbankstruktur zu entwickeln, hat uns ein tieferes Verständnis für die Anforderungen einer skalierbaren und benutzerfreundlichen Chat-App vermittelt.
 
+Entschieden von Luka
+
 --------------------------------------------------------------------------------------------------------------------
 **3. Design-Decision (Frontend-Technologie)**
 
 Die Entscheidung, das Frontend unter Verwendung bestimmter CSS-Bibliotheken zu gestalten, zeigt ein Bestreben, ein lebendiges und ansprechendes Design zu entwickeln. Ein signifikanter Teil dieser Bemühungen umfasste die Integration der Bootstrap-Bibliothek, die eine grundlegende Rolle bei der Gestaltung der Benutzeroberfläche spielte. Durch die Nutzung von Bootstrap konnten wir nicht nur die Entwicklung beschleunigen, sondern auch sicherstellen, dass unsere Webanwendung auf verschiedenen Geräten und Bildschirmgrößen reibungslos funktioniert, was essentiell für die Bereitstellung einer responsiven und zugänglichen Benutzererfahrung ist. Allerdings stellten wir fest, dass nicht alles reibungslos verlief und das responsive Design nicht immer wie erwartet funktionierte. Dennoch war diese Erfahrung nicht umsonst, denn sie ermöglichte es uns, wertvolle Erkenntnisse zu gewinnen und unsere Fähigkeiten in der Entwicklung von Benutzeroberflächen zu verbessern. Durch diese Designentscheidungen streben wir danach, die Benutzerbindung zu stärken und eine positive Wahrnehmung der Anwendung zu fördern.
 
+Entschieden von Yakub
+
+
+--------------------------------------------------------------------------------------------------------------------
 ### Regarded options
 
 [Describe any possible design decision that will solve the problem. Assess these options, e.g., via a simple pro/con list.]

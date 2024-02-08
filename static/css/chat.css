@@ -35,10 +35,26 @@ body, html {
 .random-image{
     position: fixed;
     top: 98px;
-    border: 5px solid rgb(0, 0, 0);
-    border-radius: 100px;
+    
+    
     height: 750px;
-    width: 300px;
+    width: 320px;
+}
+
+.mid-right{
+    right: 320px;
+}
+
+.mid-mid-right{
+    right: 640px;
+}
+
+.mid-mid-left{
+    left: 640px;
+}
+
+.mid-left{
+    left: 320px;
 }
 
 .side-pic .left{
@@ -54,7 +70,7 @@ body, html {
     overflow-y: auto; /* Ermöglicht das vertikale Scrollen, falls viele Nachrichten vorhanden sind */
     margin: 1rem 0; /* Fügt oben und unten einen Rand hinzu */
     z-index: 0;
-    margin-top: 70px;
+    margin-top: 90px;
 }
 
 .input-container {
@@ -85,4 +101,81 @@ body, html {
     bottom: 1px;
     right: 4px;
     color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 1440px) {
+    .random-image{
+        height: 750px;
+        width: 240px;
+    }
+    
+    .mid-right{
+        right: 240px;
+    }
+    
+    .mid-mid-right{
+        right: 480px;
+    }
+    
+    .mid-mid-left{
+        left: 480px;
+    }
+    
+    .mid-left{
+        left: 240px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .random-image{
+        height: 650px;
+        width: 170px;
+    }
+    
+    .mid-right{
+        right: 170px;
+    }
+    
+    .mid-mid-right{
+        right: 340px;
+    }
+    
+    .mid-mid-left{
+        left: 340px;
+    }
+    
+    .mid-left{
+        left: 170px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .random-image{
+        height: 650px;
+        width: 207px;
+    }
+    
+    .mid-right{
+        display: none;
+    }
+    
+    .mid-mid-right{
+        display: none;
+    }
+    
+    .mid-mid-left{
+        display: none;
+    }
+    
+    .mid-left{
+        display: none;
+    }
+
+    .right{
+        right: 0px;
+    }
+    
+    .left{
+        left: 0px;
+    }
 }

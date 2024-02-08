@@ -9,34 +9,6 @@ AnimeSphere ist der ideale Ort, um in privaten Gesprächen mit Freunden und Unbe
 AnimeSphere löst das Problem der begrenzten Möglichkeiten zur Vernetzung und Diskussion für Anime-Liebhaber, indem es eine dedizierte Plattform bietet, auf der alle Anime-Fans ihre Leidenschaft teilen und tiefgreifende Gespräche über die Welt der Anime führen können.
 
 
-**Ziel als Gruppe:**
-
-**Persönlich (Studentenperpektive):**
-
-Wir sind daran interessiert unser theoretisches Wissen in der Web-Programmierung weiter auszubauen, indem wir mit, der für uns neuen Technologien, Python und Flask eine Web-Chat-App programmieren. Dies soll vor allem unsere praktischen Fähigkeiten in der Programmierung stärken.
-
-
-**Ziel von Luka:** 
-
-Ich persönlich hoffe von diesem Projekt und auch von diesem Kurs mehr über Python und Html zu lernen. Von einem Freund, der in der Branche auch schon arbeitet, weiß ich das diese zwei Sprachen oft benutzt wird, weshalb ein gutes Wissen in beiden vom Vorteil ist. 
-
-**Ziel von Yakub:**
-
-Ich hoffe mir nach Abschluss des Projektes im Bereich Programmierung von Web-Apps bewanderter zu sein, da ich später wahrscheinlich auch genau in diese Richtung gehen möchte.
-
-
-**Als Hersteller und CEO von AnimeSphere:**
-
-**Benutzerwachstum:** Eine primäre Zielsetzung wäre die kontinuierliche Steigerung der Nutzerbasis
-. Das Ziel wäre es, die App zu einer zentralen Anlaufstelle für Anime-Fans zu machen, indem man kontinuierlich neue Mitglieder anzieht und die aktive Teilnahme fördert.
-
-**Technologische Innovation:** Der CEO könnte danach streben, die App kontinuierlich zu verbessern und technologische Innovationen einzuführen, um die Benutzererfahrung zu optimieren. Dies könnte die Integration von KI für personalisierte Empfehlungen, Verbesserungen in der Benutzeroberfläche oder die Einführung neuer Kommunikationsfunktionen umfassen.
-
-**Monetarisierung:** Die Schaffung eines nachhaltigen Geschäftsmodells könnte ein Ziel sein. Dies könnte durch die Einführung von Premium-Mitgliedschaften, Anzeigenpartnerschaften, Merchandising oder andere Monetarisierungsstrategien erreicht werden, um die langfristige finanzielle Stabilität der Plattform sicherzustellen.
-
-**Partnerschaften und Zusammenarbeit:** Die Bildung von Partnerschaften mit Anime-Produktionsstudios, Veranstaltern von Anime-Events oder anderen relevanten Akteuren in der Anime-Branche könnte ein Ziel sein. Solche Kooperationen könnten dazu beitragen, die App als einen bedeutenden Akteur in der Anime-Community zu etablieren.
-
-
 
 
 **Aufteilung der Projektarbeit**

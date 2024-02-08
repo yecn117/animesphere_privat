@@ -132,3 +132,25 @@ Die Verwendung einer dokumentenorientierten Datenbank wie MongoDB könnte in ein
 Nach sorgfältiger Abwägung der Vor- und Nachteile beider Ansätze kommen wir zu dem Beschluss, dass die Verwendung von SQLite besser zu den Anforderungen des Projekts und zum Schema der App selbst passt. Die Entscheidung für SQLite bietet eine solide Grundlage für eine relationale Datenbankstruktur, die gut strukturierte und miteinander verbundene Daten ermöglicht. Dies ist entscheidend für die Verwaltung von Benutzerkonten, Chatrooms, Nachrichten und Supportanfragen in unserer Chat-App. Darüber hinaus bietet SQLite eine einfachere Einrichtung und Integration, was besonders für ein Studienprojekt von Vorteil ist, das möglicherweise begrenzte Ressourcen und Zeit hat.
 
 --------------------------------------------------------------------------------------------------------------------
+
+**Zur 3. Design-Decision (Frontend-Technologie)**
+
+| Vorteil                     | Nachteil                                |
+|-----------------------------|-----------------------------------------|
+| - Ermöglicht variablen      | - Erfordert eine Einarbeitung in Sass   |
+|   und Mixins, was das       | - Muss in CSS kompiliert werden, was    |
+|   CSS effizienter und       |   einen zusätzlichen Schritt im         |
+|   wartbarer macht           |   Entwicklungsprozess darstellt         |
+| - Fördert wiederverwendbaren| - Zusätzliche Tooling-Abhängigkeiten    |
+|   Code und hilft, die       |                                         |
+|   Stylesheets organisiert   |                                         |
+|   zu halten                 |                                         |
+| - Ermöglicht fortschrittliche|                                        |
+|   Designs und Funktionen    |                                        |
+
+
+**Bewertung:**
+
+Insgesamt stellt die Ergänzung von Bootstrap mit Sass eine leistungsfähige Kombination dar, die Entwicklern mehr Kontrolle und Flexibilität bei der Gestaltung des Frontends bietet. Die Fähigkeit, den Code sauber, organisiert und wartbar zu halten, während man gleichzeitig erweiterte Styling-Funktionen nutzt, macht Sass zu einer wertvollen Ergänzung für jedes Frontend-Projekt.
+
+Dennoch war die Nutzung der erweiterten Funktionen von Sass nicht unbedingt erforderlich, da das Projekt bereits durch die robusten Webkit-Funktionen von CSS gut unterstützt wurde. Zusätzlich bot die CSS-Bibliothek zahlreiche nützliche Designfunktionen, wie beispielsweise die Hintergrundbildanimation mit background-clip, die im Code implementiert wurde. Trotzdem wurde die Zeit für den Aufwand, sich mit Sass zu beschäftigen, als nicht lohnenswert erachtet, da die vorhandenen CSS- und Bootstrap-Funktionen bereits ausreichend waren, um die gestalterischen Anforderungen des Projekts zu erfüllen.

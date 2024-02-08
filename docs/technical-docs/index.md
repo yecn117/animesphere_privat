@@ -5,6 +5,8 @@ nav_order: 2
 ---
 
 {: .label }
-[Jane Dane]
+
+Yakub Ercan
+Luka Poljic
 
 # [Technical documentation]

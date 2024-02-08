@@ -5,6 +5,8 @@ nav_order: 5
 ---
 
 {: .label }
-[Jane Dane]
+
+Yakub Ercan
+Luka Poljic
 
 # [Team evaluation]

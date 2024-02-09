@@ -3,14 +3,9 @@ title: Home
 nav_order: 0
 ---
 
-{: .attention }
-> Any text enclosed by `[ ]` are placeholders, including the opening and closing brackets.
->
-> You may delete this `attention` box.
+# [ AnimeSphere ]
 
-# [Project Name]
-
-[Project description]
+AnimeSphere ist eine interaktive Chat-Plattform, die es Benutzern ermöglicht, sich in themenbasierten Chatrooms auszutauschen, neue Chaträume zu erstellen und an Diskussionen teilzunehmen. Basierend auf Python, SQLite, HTML, CSS und JavaScript bietet die App ein reichhaltiges Nutzererlebnis, von einem sicheren Einlogsystem bis hin zur direkten Kommunikation. Zusätzlich ermöglichen integrierte Suchfunktionen und eine benutzerfreundliche Navigation eine effiziente Interaktion und Informationsaustausch. Mit besonderem Fokus auf die Anime-Community schafft AnimeSphere einen Raum für Fans, um sich zu vernetzen und Inhalte zu teilen.
 
 ## Team members
 

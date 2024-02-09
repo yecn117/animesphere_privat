@@ -46,7 +46,7 @@ Success message (typically): "Your support request has been submitted successful
 
 Error message: "All fields are required."
 
-![Info Missing](infomissing.png "info-missing")
+![Info Missing](/docs/technical-docs/doc-img/infomissing.png "info-missing")
 
 ------------------------------------------------------------------------------------------------
 ### `home():`

@@ -41,8 +41,12 @@ nav_order: 4
 
 **Sample output:**
 
-Success message (typically): "Your support request has been submitted successfully."
+Success message (typically): "Your support request has been submitted successfully." (failed)
+
+
 Error message: "All fields are required."
+
+![Info Missing](infomissing.png "info-missing")
 
 ------------------------------------------------------------------------------------------------
 ### `home():`
@@ -63,3 +67,46 @@ This function is designed to manage the login and registration process within a 
 "This username already exists!"
 
 "Username or password is incorrect!"
+
+------------------------------------------------------------------------------------------------
+### `rooms():`
+
+**Route:** `/rooms`
+
+**Methods:** `GET`
+
+**Purpose:** 
+
+The function first checks if the user is logged in by looking for a username in the session. Users who are not logged in are redirected to the home page. For logged-in users, the function retrieves all chat rooms from the database. If a search term is provided, it filters the chat rooms to only show those that match the search criteria. If no chat rooms are found or the search yields no results, an appropriate message is displayed. Finally, the function renders an HTML page that presents the chat rooms (or a message if none were found). This functionality allows users to view existing chat rooms and search for specific chat rooms.
+
+**Sample output:**
+
+1. **Gerenderte HTML-Seite mit allen Chaträumen**
+
+<ul>
+  <li>Chatroom 1</li>
+  <li>Chatroom 2</li>
+  <li>Chatroom 3</li>
+</ul>
+
+
+![Chatroomliste](Chatroomliste.png "Chatroomliste")
+
+
+
+2. **Gerenderte HTML-Seite mit gefilterten Chaträumen**
+
+<ul>
+  <li>Chatroom 2 - Filtered Result</li>
+  <li>Chatroom 3 - Filtered Result</li>
+</ul>
+
+
+![filtered-chatroomlist](filtered-chatroomlist.png "filtered-chatroomlist")
+
+
+3. **Nachricht über keine Suchergebnisse**
+
+<p>No chatrooms found!</p>
+
+![no-chatrooms-found](no-chatrooms-found.png "no-chatrooms-found")

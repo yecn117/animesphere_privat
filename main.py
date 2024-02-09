@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, session, redirect, url_for, flash
-from flask_socketio import join_room, leave_room, send, SocketIO
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import pytz
@@ -15,7 +14,6 @@ import random
 
 app = Flask (__name__)
 app.config["SECRET_KEY"]= "jsjdjsjhd"
-socketio = SocketIO(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///animesphere.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -275,4 +273,4 @@ def submit_support_request():
 
 
 if __name__ == "__main__":
-    socketio.run(app, debug=True)
+    app.run(debug=True)

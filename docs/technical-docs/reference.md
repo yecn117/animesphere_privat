@@ -62,11 +62,19 @@ This function is designed to manage the login and registration process within a 
 
 "Please enter user name and password!"
 
+![Username and Password Output](/docs/technical-docs/doc-img/Username-PW.png "Username and Password Output")
+
 "Your user has been registered!"
+
+![Registered Output](/docs/technical-docs/doc-img/registered.png "Registered Output")
 
 "This username already exists!"
 
+![Already Exists Output](/docs/technical-docs/doc-img/us-already-exists.png "Already Exists Output")
+
 "Username or password is incorrect!"
+
+![False Data Output](/docs/technical-docs/doc-img/falsedata.png "False Data Output")
 
 ------------------------------------------------------------------------------------------------
 ### `rooms():`
@@ -90,7 +98,7 @@ The function first checks if the user is logged in by looking for a username in 
 </ul>
 
 
-![Chatroomliste](Chatroomliste.png "Chatroomliste")
+![Chatroomliste](/docs/technical-docs/doc-img/Chatroomliste.png "Chatroomliste")
 
 
 
@@ -102,11 +110,11 @@ The function first checks if the user is logged in by looking for a username in 
 </ul>
 
 
-![filtered-chatroomlist](filtered-chatroomlist.png "filtered-chatroomlist")
+![filtered-chatroomlist](/docs/technical-docs/doc-img/filtered-chatroomlist.png "filtered-chatroomlist")
 
 
 3. **Nachricht über keine Suchergebnisse**
 
 <p>No chatrooms found!</p>
 
-![no-chatrooms-found](no-chatrooms-found.png "no-chatrooms-found")
+![no-chatrooms-found](/docs/technical-docs/doc-img/no-chatrooms-found.png "no-chatrooms-found")

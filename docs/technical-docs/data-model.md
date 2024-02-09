@@ -8,11 +8,6 @@ nav_order: 3
 [Jane Dane]
 
 # [Data model]
-{: .no_toc }
 
-<details open markdown="block">
-{: .text-delta }
-<summary>Table of contents</summary>
-+ ToC
-{: toc }
-</details>
+
+![UML Diagramm](/docs/technical-docs/doc-img/UML.png "UML Diagramm")

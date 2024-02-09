@@ -31,6 +31,7 @@ Contributions
 : Luka's fifth contribution (with Yakub together): Overall Design 
 
 
+
 Hinsichtlich dem Log-in System werden wir uns für das herkömmliche Einlogsystem entscheiden, denn das ist den meisten bekannt und führt dementsprechend zu weniger Verwirrung. Dazu hat der User erstmals die Möglichkeit durch Eigeben von Username und Passwort und Klicken des Sign-in Button sich ein Account zu erstellen.
 Darauffollgend sollte er sich dann durch erneute Eingabe seiner Daten und KLicken des Log-in Button sich einloggen können. Sollten sich Fehler bei der Anmeldung ergeben, wird der User mit passenden Benachrichtigungen darüber informiert.
 

@@ -70,7 +70,7 @@ The reason these users would choose AnimeSphere as their primary place to do thi
 
 Die User Journey teilt sich in 2 Anleitungen. Du kannst, je nach Wissensstand entscheiden mit wie du beginnst!
 
-Die Schritte 1 bis 14 umfassen den Vorgang alle Vorrausetzungen zu erfüllen, um die Anwendung zu öffnen.
+Die Schritte 1 bis 14 umfassen den Vorgang alle Vorrausetzungen zu erfüllen, um die Anwendung zu öffnen..hj
 
 Ab Schritt 15 wird die eigentliche User Journey beschrieben.
 

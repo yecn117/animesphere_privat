@@ -18,13 +18,6 @@ nav_order: 4
 
 ## 01: [User Evaluation]
 
-### Meta
-
- - Done - 
-
-Updated
-: DD-MMM-YYYY
-
 ### Goal
 
 The aim of this evaluation is to find out how satisfied users are with the app's features and usability.
@@ -122,4 +115,6 @@ Average: 4
 ### Implications
 
 Based on the completed survey, it is evident that there is a need for improvement in the communication features. For instance, introducing a function that allows users to directly reply to individual messages could enhance the user experience.
+
+
 ---

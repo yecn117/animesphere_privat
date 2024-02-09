@@ -10,4 +10,4 @@ nav_order: 3
 # [Data model]
 
 
-![UML-Diagramm](UML.png "UML-Diagramm")
+![UML-Diagramm](/docs/technical-docs/doc-img/UML.png "UML-Diagramm")

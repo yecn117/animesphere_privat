@@ -4,9 +4,6 @@ parent: Team Evaluation
 nav_order: 2
 ---
 
-{: .label }
-[Jane Dane]
-
 # [How we would improve next time]
 
 **Organization:**
@@ -20,8 +17,6 @@ The addition of user roles, particularly the inclusion of a moderator function, 
 
 **Responsive Design:**
 Improving the responsive design of the web application, especially when the user chooses to resize the window, is an area that could be enhanced. Although we made partial improvements, particularly on certain pages, the responsive design in chatrooms could be refined. While this issue doesn't affect the functionality of the web app, it can influence the overall user experience.
-
-**Messaging System:**
 
 <details open markdown="block">
 {: .text-delta }

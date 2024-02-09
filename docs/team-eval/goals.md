@@ -4,13 +4,11 @@ parent: Team Evaluation
 nav_order: 1
 ---
 
-{: .label }
-[Jane Dane]
 
 # [Goals achieved and missed]
-**Ziel als Gruppe:**
+**Group Goals:**
 
-**Persönlich (Studentenperpektive):**
+**Personal (Student Perspective):**
 
 We are interested in further expanding our theoretical knowledge in web programming by developing a web chat application using the new technologies Python and Flask. This is intended to particularly strengthen our practical programming skills. Both of us felt that we genuinely learned through the course and the project work. It was often challenging, and there were times when we were unsure how to proceed, but ultimately, we overcame these challenges and delivered a respectable project.
 

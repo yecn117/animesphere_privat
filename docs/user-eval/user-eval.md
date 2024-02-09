@@ -16,30 +16,110 @@ nav_order: 4
 {: toc }
 </details>
 
-## 01: [Title]
+## 01: [User Evaluation]
 
 ### Meta
 
-Status
-: **Work in progress** - Done - Obsolete
+ - Done - 
 
 Updated
 : DD-MMM-YYYY
 
 ### Goal
 
-[Describe the goal of this evaluation, for example as a research question like: "How long does it take to register a new account and what is the drop-out rate?"]
+The aim of this evaluation is to find out how satisfied users are with the app's features and usability.
 
 ### Method
 
-[Describe how you proceed to achieve your evaluation goal. Be as specific as possible: others should be able to replicate your evaluation by following the description on this section.]
+Our method is a survey.
+
+Please rate the following aspects of the AnimeSphere app on a scale from 1 to 5, where 1 stands for "Poor" and 5 stands for "Excellent".
+
+**Login and Registration**
+
+How would you rate the simplicity of the login and registration process?
+ 1 (Poor)
+ 2
+ 3
+ 4
+ 5 (Excellent)
+
+
+**Navigation and User Interface**
+
+How do you rate the usability and navigation within the app?
+ 1 (Poor)
+ 2
+ 3
+ 4
+ 5 (Excellent)
+
+
+**Search Functionality**
+
+How effective do you find the search functions in finding specific chat rooms or topics?
+ 1 (Poor)
+ 2
+ 3
+ 4
+ 5 (Excellent)
+
+
+**Communication Features**
+
+How would you rate the quality and reliability of the communication features (chat, discussion forums, etc.)?
+ 1 (Poor)
+ 2
+ 3
+ 4
+ 5 (Excellent)
+
+
+**Overall Impression**
+
+How would you rate your overall impression of AnimeSphere?
+ 1 (Poor)
+ 2
+ 3
+ 4
+ 5 (Excellent)
 
 ### Results
 
-[Present the main results of your evaluation, for example: "On average, users need 3 min to register. The drop-out rate was 70%. Users that didn't complete provided the following reasons: ..."]
+We surveyed 5 people who used the web app. For the results, we used the average of the 5 answers.
+
+**Login and Registration**
+
+How would you rate the simplicity of the login and registration process?
+
+Average: 4 
+
+
+**Navigation and User Interface**
+
+How do you rate the usability and navigation within the app?
+
+Average: 4
+
+**Search Functionality**
+
+How effective do you find the search functions in finding specific chat rooms?
+
+Average: 5
+
+**Communication Features**
+
+How would you rate the quality and reliability of the communication features (chat, discussion forums, etc.)?
+
+Average: 3
+
+**Overall Impression**
+
+How would you rate your overall impression of AnimeSphere?
+
+Average: 4
 
 ### Implications
 
-[What did you learn from this evaluation and what will you change to improve? Example: "We aim to decrease the drop-out rate by not asking for a birth date. We will re-run this evaluation to measure the impact."]
-
+Based on the completed survey, it is evident that there is a need for improvement in the communication features. For instance, introducing a function that allows users to directly reply to individual messages could enhance the user experience.
 ---

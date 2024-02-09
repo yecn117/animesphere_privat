@@ -4,12 +4,7 @@ parent: Technical Docs
 nav_order: 1
 ---
 
-{: .label }
-[Jane Dane]
-
 # [App structure, incl. context]
-
-Here is the translation of the provided text into English:
 
 ### 1. env Directory:
 The `env` directory houses the virtual environment for the Python application, creating an isolated setting for the Animesphere app. This ensures that all necessary Python libraries and dependencies can be installed and managed specifically for the project without affecting the system or the environments of other projects. The subdirectories and the `pyvenv.cfg` file contribute to making the setup reproducible and consistent across different development environments.

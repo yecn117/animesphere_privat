@@ -3,6 +3,10 @@
 
 Team members: Yakub Ercan und Luka Poljic 
 
+
+AnimeSphere is an interactive chat platform that allows users to engage in topic-based chat rooms, create new chat rooms, and participate in discussions. Built using Python, SQLite, HTML, CSS, and JavaScript, the app offers a rich user experience, from secure login systems to direct communication. Integrated search functionality and user-friendly navigation further facilitate efficient interaction and information exchange. With a special focus on the anime community, AnimeSphere creates a space for fans to connect and share content.
+
+
 **value proposition:**
 AnimeSphere is the ideal place to immerse yourself in the world of anime through private conversations with friends and strangers alike. Dive into the endless variety of the AnimeSphere, discuss your favorite series, and share your passion for this fascinating form of entertainment. Whether you want to talk about classics, the latest releases, or hidden gems, AnimeSphere provides the perfect platform to chat with like-minded individuals about the adventures, emotions, and stories in the world of anime. And let's not forget, there's also a dedicated chat room for each anime, allowing fans to engage in discussions specific to their favorite shows. Step in and let the anime conversations begin!
 

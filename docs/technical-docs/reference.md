@@ -28,19 +28,21 @@ nav_order: 4
 
 **Purpose:** 
 
-**Anwendungszweck:** Die Funktion verarbeitet POST-Anfragen an die Route /submit_support_request. Wenn ein Benutzer über ein Formular auf der Website Support anfordert, werden die eingegebenen Informationen wie Name, E-Mail, Betreff und Nachricht aus dem Formular ausgelesen.
+**Functional purpose:** The function processes POST requests to the route /submit_support_request. When a user requests support via a form on the website, the entered information such as name, email, subject, and message is extracted from the form.
 
-**Verarbeitung der Anfrage:** Die Funktion überprüft, ob alle erforderlichen Felder ausgefüllt wurden. Falls nicht, wird eine Fehlermeldung angezeigt und der Benutzer zurück zur Kontaktseite geleitet.
+**Processing the request:** The function checks if all required fields have been filled out. If not, an error message is displayed and the user is redirected back to the contact page.
 
-**Speichern der Anfrage:** Wenn alle Felder ausgefüllt sind, wird eine neue Support-Anfrage in der Datenbank erstellt und gespeichert.
+**Saving the request:** If all fields are filled out, a new support request is created and saved in the database.
 
-**Weiterleitung und Erfolgsmeldung:** Nach erfolgreicher Verarbeitung der Anfrage wird der Benutzer zur Kontaktseite weitergeleitet und erhält eine Erfolgsmeldung. (Wichtig!: Aus wahrscheinlich tüchtigen Fehler, vielleicht auch ein Tippfehler wird zwar keine Erfolgsmeldung, wie vorgesehen angezeigt, jedoch werden die Daten an die Datenbank weitergeleitet und gespeichert. Eine Fehlermeldung zur einer Supportanfrage wird trotzdem angezeigt.)
+**Redirection and success message::** After successfully processing the request, the user is redirected to the contact page and receives a success message. 
+
+**(Important Note: Despite a potential minor error or typo, while the success message may not be displayed as intended, the data is still forwarded and stored in the database. However, an error message regarding the support request will still be displayed.)**
                                       
 
 **Sample output:**
 
-Erfolgsmeldung (normalerweise): 'Your support request has been submitted successfully.'
-Fehlermeldung: 'All fields are required.'
+Success message (typically): "Your support request has been submitted successfully."
+Error message: "All fields are required."
 
 -------------------------------------------------------------------------------------------------------------
 

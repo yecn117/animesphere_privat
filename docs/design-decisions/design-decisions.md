@@ -32,36 +32,36 @@ Updated
 
 [Describe the problem to be solved or the goal to be achieved. Include relevant context information.]
 
-**1. Problemstellung: Auswahl einer geeigneten Authentifizierungsmethode:**
+**1. Problem Statement: Selection of a Suitable Authentication Method:**
 
-Das Ziel dabei wäre die Implementierung einer sicheren, benutzerfreundlichen und effizienten Methode zur Authentifizierung potentiellen Usern, die es ihnen ermöglicht, sich registrieren und anmelden zu können, um auf die App und ihre Funktionen, wie das Durchstöbern der Chatrooms und das Senden von Nachrichten, zugreifen zu können.
+The goal would be to implement a secure, user-friendly, and efficient method for authenticating potential users, allowing them to register and log in to access the app and its features, such as browsing chatrooms and sending messages.
 
-**Sicherheit:** Die Authentifizierungsmethode muss sicherstellen, dass Benutzerdaten geschützt sind und unbefugter Zugriff verhindert wird.
+**Security:** The authentication method must ensure that user data is protected and unauthorized access is prevented.
 
-**Benutzerfreundlichkeit:** Die Methode sollte einfach und intuitiv sein, um eine hohe Akzeptanz bei den Benutzern zu erreichen und den Registrierungs- sowie Anmeldeprozess so reibungslos wie möglich zu gestalten.
+**User-Friendliness:** The method should be simple and intuitive to achieve high acceptance among users and make the registration and login process as smooth as possible.
 
-**Skalierbarkeit:** Die gewählte Lösung sollte in der Lage sein, mit einer wachsenden Anzahl von Benutzern umzugehen, ohne an Leistung zu verlieren.
-
---------------------------------------------------------------------------------------------------------------------
-
-**2. Problemstellung: Datenbankstruktur:**
-
-Das Ziel besteht darin, eine robuste und skalierbare Datenbankstruktur für die Chat-Anwendung zu entwerfen, die eine effiziente Verwaltung von Benutzerdaten, Chatrooms und Nachrichten ermöglicht. Die Datenbankstruktur sollte die folgenden Hauptentitäten und deren Beziehungen umfassen:
-
-Benutzerkonten: Erfassung von Benutzerinformationen wie Benutzername und Passwort (gehasht) anderen relevanten Informationen. Die Struktur sollte auch Mechanismen zur Authentifizierung und Autorisierung von Benutzern unterstützen.
-
-Chatrooms: Verwaltung von Chatrooms, einschließlich ihrer Titel, Beschreibungen, Mitglieder und möglicherweise auch spezifischer Einstellungen wie Sichtbarkeit, Zugriffsrechte und Moderatoren.
-
-Nachrichtenverläufe: Speicherung von Nachrichten, die in den Chatrooms ausgetauscht werden, einschließlich des Inhalts der Nachricht, des Zeitstempels, des Absenders und der zugehörigen Chatroom-IDs.
-
-Die Datenbankstruktur muss flexibel genug sein, um Änderungen und Erweiterungen zu ermöglichen, wie die Hinzufügung neuer Chatrooms, die Verwaltung von Benutzerrollen oder die Implementierung von Nachrichtenverschlüsselung. Sie sollte auch eine effiziente Datenabfrage und -manipulation ermöglichen, um eine reibungslose und schnelle Leistung der Anwendung sicherzustellen, selbst bei einem wachsenden Datenvolumen und einer zunehmenden Anzahl von Benutzern. Letztendlich sollte die Datenbankstruktur das Herzstück der Chat-Anwendung sein, die eine zuverlässige und sichere Speicherung und Verwaltung von Informationen gewährleistet, um eine optimale Benutzererfahrung zu ermöglichen.
-
+**Scalability:** The chosen solution should be capable of handling a growing number of users without losing performance.
 
 --------------------------------------------------------------------------------------------------------------------
 
-**3. Problemstellung: Frontend-Technologie:**
+**2. Problem Statement: Database structure**
 
-Das Ziel besteht darin, geeignete Technologien für die Entwicklung der Benutzeroberfläche einer Webanwendung zu wählen. Die Herausforderung liegt darin, eine einfache und benutzerfreundliche Oberfläche zu schaffen, die gut aussieht und auf verschiedenen Geräten funktioniert. Es geht darum, Entscheidungen zu treffen, die sicherstellen, dass die Website schnell lädt, leicht zu bedienen ist und gut aussieht. Dazu gehört auch die Auswahl von Tools und Technologien, die die Entwicklung erleichtern und es ermöglichen, die Website einfach zu aktualisieren und zu warten. Letztendlich wollen wir sicherstellen, dass die Nutzer eine positive Erfahrung machen, wenn sie die Website besuchen, und dass die Entwicklung des Frontends reibungslos verläuft.
+The goal is to design a robust and scalable database structure for the chat application that enables efficient management of user data, chatrooms, and messages. The database structure should encompass the following main entities and their relationships:
+
+User Accounts: Capturing user information such as username and password (hashed) among other relevant details. The structure should also support mechanisms for authenticating and authorizing users.
+
+Chatrooms: Management of chatrooms, including their titles, descriptions, members, and possibly specific settings like visibility, access rights, and moderators.
+
+Message Histories: Storing messages exchanged in chatrooms, including the content of the message, timestamp, sender, and associated chatroom IDs.
+
+The database structure must be flexible enough to accommodate changes and expansions, such as adding new chatrooms, managing user roles, or implementing message encryption. It should also enable efficient data querying and manipulation to ensure smooth and fast performance of the application, even with growing data volumes and an increasing number of users. Ultimately, the database structure should be the core of the chat application, ensuring reliable and secure storage and management of information to enable an optimal user experience.
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+**3. Problem Statement: Frontend technology:**
+
+The goal is to choose suitable technologies for developing the user interface of a web application. The challenge lies in creating a simple and user-friendly interface that looks good and works across various devices. It involves making decisions to ensure that the website loads quickly, is easy to use, and looks appealing. This includes selecting tools and technologies that facilitate development and enable easy updating and maintenance of the website. Ultimately, we want to ensure that users have a positive experience when visiting the website and that the frontend development proceeds smoothly.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -70,26 +70,26 @@ Das Ziel besteht darin, geeignete Technologien für die Entwicklung der Benutzer
 
 [Describe **which** design decision was taken for **what reason** and by **whom**.]
 
- **1. Design-Decision (Authentifizierungsmethode)**
+ **1. Design-Decision (Authentication method)**
 
- Wir fokussierten uns auf die Implementierung einer sicheren und benutzerfreundlichen Authentifizierungsmethode unter Verwendung von Passwort-Hashing mit pbkdf2:sha256. Diese Entscheidung basierte auf dem Bedürfnis, ein hohes Sicherheitsniveau zu gewährleisten, indem Nutzerpasswörter sicher gespeichert werden, was besonders in der heutigen Zeit, in der Datenschutz und Sicherheit von größter Bedeutung sind, unerlässlich ist. Die Wahl fiel auf eine Balance zwischen robuster Sicherheit und effizienter Performance, ohne dabei die Benutzererfahrung zu beeinträchtigen. Indem nur gehashte Passwörter gespeichert werden, schützen wir Nutzerdaten effektiv vor potenziellen Datenlecks. Gleichzeitig bleibt das System durch die effiziente Implementierung in Python und SQLite reaktionsschnell und skalierbar. Diese Strategie lässt Raum für zukünftige Erweiterungen, wie beispielsweise die Einführung einer Zwei-Faktor-Authentifizierung, ohne die Notwendigkeit, die Grundarchitektur der Anwendung umfassend zu überarbeiten.
+ We focused on implementing a secure and user-friendly authentication method using password hashing with pbkdf2:sha256. This decision was based on the need to ensure a high level of security by securely storing user passwords, which is essential especially in today's climate where privacy and security are of paramount importance. The choice struck a balance between robust security and efficient performance without compromising user experience. By storing only hashed passwords, we effectively protect user data from potential data breaches. At the same time, the system remains responsive and scalable through efficient implementation in Python and SQLite. This strategy allows room for future expansions, such as the introduction of two-factor authentication, without the need for extensive overhaul of the application's basic architecture.
 
- Entschieden von Yakub
-
---------------------------------------------------------------------------------------------------------------------
-
-**2. Design-Decision (Datenbankstruktur)**
-
-Die Entscheidung zur Strukturierung der Datenbank, trotz der Vorgabe durch den Lehrer, SQLite zu verwenden, basierte auf der Notwendigkeit, eine effiziente und logisch kohärente Organisation der Daten zu gewährleisten, die die Funktionalitäten der Chat-App optimal unterstützt. Durch die Einteilung in vier Haupttabellen – User, Chatroom, Message und Support – wurde eine klare Trennung der verschiedenen Datenkategorien erreicht, die sowohl die Datenintegrität als auch die Abfrageeffizienz verbessert. Die User-Tabelle ermöglicht die eindeutige Identifikation der Benutzer, während die Chatroom-Tabelle die Grundlage für die Erstellung und Verwaltung verschiedener Chaträume bietet. Die Message-Tabelle bildet das Herzstück der Kommunikation, indem sie Nachrichten den entsprechenden Benutzern und Chaträumen zuordnet. Die Support-Tabelle schließlich dient der Verwaltung von Nutzeranfragen, was für die Nutzerbetreuung und das Feedbackmanagement essenziell ist. Diese Strukturierung unterstützt nicht nur die grundlegenden Anforderungen der App, wie Benutzerauthentifizierung, Nachrichtenübermittlung und Supportanfragen, sondern ist auch flexibel genug, um zukünftige Erweiterungen und Funktionalitäten zu integrieren. Die Entscheidung, trotz der Vorgabe von SQLite, eine solche detaillierte und durchdachte Datenbankstruktur zu entwickeln, hat uns ein tieferes Verständnis für die Anforderungen einer skalierbaren und benutzerfreundlichen Chat-App vermittelt.
-
-Entschieden von Luka
+Decided by Yakub
 
 --------------------------------------------------------------------------------------------------------------------
-**3. Design-Decision (Frontend-Technologie)**
 
-Die Entscheidung, das Frontend unter Verwendung bestimmter CSS-Bibliotheken zu gestalten, zeigt ein Bestreben, ein lebendiges und ansprechendes Design zu entwickeln. Ein signifikanter Teil dieser Bemühungen umfasste die Integration der Bootstrap-Bibliothek, die eine grundlegende Rolle bei der Gestaltung der Benutzeroberfläche spielte. Durch die Nutzung von Bootstrap konnten wir nicht nur die Entwicklung beschleunigen, sondern auch sicherstellen, dass unsere Webanwendung auf verschiedenen Geräten und Bildschirmgrößen reibungslos funktioniert, was essentiell für die Bereitstellung einer responsiven und zugänglichen Benutzererfahrung ist. Allerdings stellten wir fest, dass nicht alles reibungslos verlief und das responsive Design nicht immer wie erwartet funktionierte. Dennoch war diese Erfahrung nicht umsonst, denn sie ermöglichte es uns, wertvolle Erkenntnisse zu gewinnen und unsere Fähigkeiten in der Entwicklung von Benutzeroberflächen zu verbessern. Durch diese Designentscheidungen streben wir danach, die Benutzerbindung zu stärken und eine positive Wahrnehmung der Anwendung zu fördern.
+**2. Design-Decision (Database structure)**
 
-Entschieden von Yakub
+The decision to structure the database, despite the teacher's directive to use SQLite, was based on the necessity to ensure an efficient and logically coherent organization of data that optimally supports the functionalities of the chat app. By dividing it into four main tables - User, Chatroom, Message, and Support - a clear separation of the different data categories was achieved, which improves both data integrity and query efficiency. The User table allows for the unique identification of users, while the Chatroom table provides the basis for creating and managing various chatrooms. The Message table forms the core of communication by associating messages with the corresponding users and chatrooms. Finally, the Support table serves to manage user inquiries, which is essential for customer support and feedback management. This structuring not only supports the basic requirements of the app, such as user authentication, message transmission, and support requests but is also flexible enough to integrate future expansions and functionalities. The decision to develop such a detailed and well-thought-out database structure, despite the directive to use SQLite, has given us a deeper understanding of the requirements for a scalable and user-friendly chat app.
+
+Decided by Luka
+
+--------------------------------------------------------------------------------------------------------------------
+**3. Design-Decision (Frontend technology)**
+
+The decision to design the frontend using specific CSS libraries demonstrates an effort to develop a vibrant and appealing design. A significant part of these efforts included the integration of the Bootstrap library, which played a fundamental role in shaping the user interface. Utilizing Bootstrap allowed us not only to accelerate development but also to ensure that our web application operates smoothly on various devices and screen sizes, which is essential for providing a responsive and accessible user experience. However, we found that not everything went smoothly, and the responsive design did not always work as expected. Nevertheless, this experience was not in vain, as it enabled us to gain valuable insights and improve our skills in user interface development. Through these design decisions, we aim to enhance user engagement and promote a positive perception of the application.
+
+Decided by Yakub
 
 
 --------------------------------------------------------------------------------------------------------------------
@@ -97,66 +97,63 @@ Entschieden von Yakub
 
 [Describe any possible design decision that will solve the problem. Assess these options, e.g., via a simple pro/con list.]
 
-**Zu 1. Design Decision (Authentifizierungsmethode)**
+**To 1. Design Decision (Authentication method)**
 
-Eine alternative Designentscheidung für die Authentifizierungsmethode könnte die Verwendung von OAuth sein, um die Authentifizierung über externe Dienste wie Google, Facebook oder Twitter zu ermöglichen.
+An alternative design decision for the authentication method could be the use of OAuth to enable authentication through external services such as Google, Facebook, or Twitter.
 
-| Vorteile                                   | Nachteile                                  |
+| Pro                                        | Cons                                       |
 |--------------------------------------------|--------------------------------------------|
-| Erweiterter Zugang zu verschiedenen        | Erhöhte Komplexität der Anwendung          |
-  Nutzergruppen
-| Datenschutzorientierte Anmeldeoptionen     | Zusätzlicher Wartungsaufwand               |
-| Spezifische Zielgruppen ansprechen         | Potenziell verwirrende Benutzererfahrung   |
-|                                            | Hohe Abhängigkeit von externen Diensten    |
+| + Enhanced access for various user groups    | - Increased complexity of the application    |
+| + Privacy-focused login options              | - Additional maintenance effort              |
+| + Targeting specific audiences               | - Potentially confusing user experience      |
+|                                            | - High dependency on external services       |
 
 
-**Bewertung:**
+**Evaluation:**
 
-Die benutzerdefinierte Authentifizierung zu entwickeln, bietet uns die Möglichkeit, tief in die Sicherheitsaspekte der Webentwicklung einzugewöhen. Es erlaubt uns, von Grund auf zu lernen, wie eigentlich Benutzerdaten sicher gespeichert und verwaltet werden. Wir können praktische Erfahrungen mit Passwort-Hashing und der Integration einer Datenbank wie SQLite sammeln. Diese Option fördert ein umfassendes Verständnis der Authentifizierungsprozesse und stärkt unsere Fähigkeiten in der Backend-Entwicklung. Allerdings ist uns bewusst, dass diese Methode zeitaufwendig sein kann und ein hohes Maß an Sorgfalt erfordert, um Sicherheitslücken zu vermeiden.
+Developing custom authentication provides us with the opportunity to delve deeply into the security aspects of web development. It allows us to learn from the ground up how user data is securely stored and managed. We can gain hands-on experience with password hashing and integrating a database like SQLite. This option promotes a comprehensive understanding of authentication processes and strengthens our skills in backend development. However, we are aware that this method can be time-consuming and requires a high level of care to avoid security vulnerabilities.
 
-Auf der anderen Seite bietet die Implementierung von OAuth durch die Nutzung externer Dienste wie Google oder Facebook eine schnellere und möglicherweise sicherere Lösung. Diese Methode ermöglicht es uns, uns auf andere Aspekte der App-Entwicklung zu konzentrieren, da wir uns weniger um die Details der Authentifizierung kümmern müssen. OAuth könnte die Benutzerfreundlichkeit unserer App verbessern, indem es den Nutzern ermöglicht, sich mit bestehenden Konten anzumelden, was die Einstiegshürde senkt. Jedoch besteht die Sorge, dass wir durch die Wahl dieser Methode die Chance verpassen könnten, tiefergehende Kenntnisse in der Authentifizierungstechnik zu erlangen.
+On the other hand, implementing OAuth through the use of external services like Google or Facebook offers a faster and potentially more secure solution. This method allows us to focus on other aspects of app development as we need to worry less about the details of authentication. OAuth could improve the user-friendliness of our app by enabling users to sign in with existing accounts, lowering the barrier to entry. However, there is concern that by choosing this method, we might miss out on the opportunity to gain deeper insights into authentication technology.
 
-Letztendlich glauben wir, dass die Entscheidung für die benutzerdefinierte Authentifizierung für unser Studienprojekt am sinnvollsten ist. Trotz des potenziell höheren Aufwands und der größeren Herausforderung sehen wir darin eine wertvolle Gelegenheit, unser Verständnis und unsere Fähigkeiten in der Webentwicklung zu vertiefen. Diese Entscheidung unterstützt unser Hauptziel, durch praktische Erfahrung zu lernen, auch wenn dies bedeutet, dass wir uns intensiver mit der Behebung von Sicherheitsfragen auseinandersetzen müssen. Wir sind überzeugt, dass die damit verbundenen Lernergebnisse für unsere zukünftige Karriere als Entwickler von unschätzbarem Wert sein werden.
+Ultimately, we believe that opting for custom authentication is most suitable for our study project. Despite the potentially higher effort and greater challenge, we see it as a valuable opportunity to deepen our understanding and skills in web development. This decision aligns with our main goal of learning through practical experience, even if it means we need to engage more deeply in addressing security concerns. We are confident that the learning outcomes associated with this decision will be invaluable for our future careers as developers.
 
 --------------------------------------------------------------------------------------------------------------------
 
-**Zur 2. Design-Decision (Datenbankstruktur)**
+**To 2. Design-Decision (Database structure)**
 
-Eine alternative Design-Entscheidung für die Datenbankstruktur könnte die Verwendung eines dokumentenorientierten Ansatzes, wie MongoDB, anstelle einer relationalen Datenbankstruktur sein.
+An alternative design decision for the database structure could involve using a document-oriented approach, such as MongoDB, instead of a relational database structure.
 
-| Vorteile                             | Nachteile                            |
+| Pro                                  | Cons                                 |
 |--------------------------------------|--------------------------------------|
-| + Flexibilität in Datenspeicherung   | - Weniger strenge Datenintegrität    |
-| + Schnelle Entwicklung               | - Komplexität bei Abfragen steigt    |
-| + Skalierbarkeit                     | - Sicherheitsbedenken                |
+| + Flexibility in sata storage        | - Less strict data integrity         |
+| + Rapid development                  | - Complexity of queries increases.   |
+| + Scalability                        | -  Security concerns                 |
 
 
-**Bewertung:**
+**Evaluation:**
 
-Die Verwendung einer dokumentenorientierten Datenbank wie MongoDB könnte in einigen Szenarien effizienter sein als die ursprüngliche relationale Struktur. Dieser Ansatz bietet Flexibilität und Skalierbarkeit für Anwendungen mit großen, variablen Datenmengen wie einer Chat-App. Jedoch können sich Herausforderungen bei der Datenintegrität und Sicherheit ergeben, da dokumentenorientierte Datenbanken weniger strenge Mechanismen bieten. Die Komplexität bei Abfragen und weniger etablierte ACID-Transaktionen sind ebenfalls zu berücksichtigen.
+The use of a document-oriented database like MongoDB could be more efficient than the original relational structure in some scenarios. This approach offers flexibility and scalability for applications with large, variable data sets such as a chat app. However, challenges with data integrity and security can arise, as document-oriented databases offer less stringent mechanisms. The complexity in queries and less established ACID transactions are also considerations.
 
-Nach sorgfältiger Abwägung der Vor- und Nachteile beider Ansätze kommen wir zu dem Beschluss, dass die Verwendung von SQLite besser zu den Anforderungen des Projekts und zum Schema der App selbst passt. Die Entscheidung für SQLite bietet eine solide Grundlage für eine relationale Datenbankstruktur, die gut strukturierte und miteinander verbundene Daten ermöglicht. Dies ist entscheidend für die Verwaltung von Benutzerkonten, Chatrooms, Nachrichten und Supportanfragen in unserer Chat-App. Darüber hinaus bietet SQLite eine einfachere Einrichtung und Integration, was besonders für ein Studienprojekt von Vorteil ist, das möglicherweise begrenzte Ressourcen und Zeit hat.
+After carefully weighing the pros and cons of both approaches, we conclude that using SQLite better suits the project's requirements and the app's schema itself. Opting for SQLite provides a solid foundation for a relational database structure that enables well-structured and interconnected data. This is crucial for managing user accounts, chatrooms, messages, and support requests in our chat app. Additionally, SQLite offers easier setup and integration, which is particularly advantageous for a study project that may have limited resources and time.
 
 --------------------------------------------------------------------------------------------------------------------
 
-**Zur 3. Design-Decision (Frontend-Technologie)**
+**To 3. Design-Decision ()**
 
-| Vorteil                     | Nachteil                                |
-|-----------------------------|-----------------------------------------|
-| - Ermöglicht variablen      | - Erfordert eine Einarbeitung in Sass   |
-|   und Mixins, was das       | - Muss in CSS kompiliert werden, was    |
-|   CSS effizienter und       |   einen zusätzlichen Schritt im         |
-|   wartbarer macht           |   Entwicklungsprozess darstellt         |
-| - Fördert wiederverwendbaren| - Zusätzliche Tooling-Abhängigkeiten    |
-|   Code und hilft, die       |                                         |
-|   Stylesheets organisiert   |                                         |
-|   zu halten                 |                                         |
-| - Ermöglicht fortschrittliche|                                        |
-|   Designs und Funktionen    |                                        |
+| Pro                                      | Con                                             |
+|------------------------------------------|-------------------------------------------------|
+| + Enables variables and mixins,          | - Requires learning Sass                        |
+|   making CSS more efficient and          | - Needs to be compiled into CSS, adding an      |
+|   maintainable                           |   additional step in the development process    |
+| + Promotes reusable code and helps       | - Additional tooling dependencies               |
+|   keep stylesheets organized             |                                                 |
+| + Allows for advanced designs and        |                                                 |
+|   features                               |                                                 |
 
 
-**Bewertung:**
 
-Insgesamt stellt die Ergänzung von Bootstrap mit Sass eine leistungsfähige Kombination dar, die Entwicklern mehr Kontrolle und Flexibilität bei der Gestaltung des Frontends bietet. Die Fähigkeit, den Code sauber, organisiert und wartbar zu halten, während man gleichzeitig erweiterte Styling-Funktionen nutzt, macht Sass zu einer wertvollen Ergänzung für jedes Frontend-Projekt.
+**Evaluation:**
 
-Dennoch war die Nutzung der erweiterten Funktionen von Sass nicht unbedingt erforderlich, da das Projekt bereits durch die robusten Webkit-Funktionen von CSS gut unterstützt wurde. Zusätzlich bot die CSS-Bibliothek zahlreiche nützliche Designfunktionen, wie beispielsweise die Hintergrundbildanimation mit background-clip, die im Code implementiert wurde. Trotzdem wurde die Zeit für den Aufwand, sich mit Sass zu beschäftigen, als nicht lohnenswert erachtet, da die vorhandenen CSS- und Bootstrap-Funktionen bereits ausreichend waren, um die gestalterischen Anforderungen des Projekts zu erfüllen.
+Overall, complementing Bootstrap with Sass provides a powerful combination that gives developers more control and flexibility in designing the frontend. The ability to keep the code clean, organized, and maintainable while leveraging advanced styling features makes Sass a valuable addition to any frontend project.
+
+However, utilizing the advanced features of Sass was not necessarily required as the project was already well-supported by the robust CSS features of Webkit. Additionally, the CSS library offered numerous useful design features, such as background image animation with background-clip, which were implemented in the code. Nonetheless, the time investment required to delve into Sass was deemed not worthwhile as the existing CSS and Bootstrap features were already sufficient to meet the project's design requirements.

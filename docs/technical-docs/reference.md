@@ -44,3 +44,9 @@ Fehlermeldung: 'All fields are required.'
 
 -------------------------------------------------------------------------------------------------------------
 
+function goBackToRooms() {
+      window.history.pushState({}, document.title, "{{ url_for('rooms') }}");
+      window.location.replace("{{ url_for('rooms') }}");
+    }
+
+    function scrollToBottom()

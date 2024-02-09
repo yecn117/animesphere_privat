@@ -44,11 +44,22 @@ nav_order: 4
 Success message (typically): "Your support request has been submitted successfully."
 Error message: "All fields are required."
 
--------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+### `home():`
 
-function goBackToRooms() {
-      window.history.pushState({}, document.title, "{{ url_for('rooms') }}");
-      window.location.replace("{{ url_for('rooms') }}");
-    }
+**Route:** `/`
 
-    function scrollToBottom()
+**Methods:** `POST`, `GET`
+
+**Purpose:** 
+This function is designed to manage the login and registration process within a web application by validating user inputs, storing user data in a database, and providing appropriate feedback to the user.
+
+**Sample output:**
+
+"Please enter user name and password!"
+
+"Your user has been registered!"
+
+"This username already exists!"
+
+"Username or password is incorrect!"

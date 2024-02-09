@@ -89,7 +89,7 @@ The function first checks if the user is logged in by looking for a username in 
 
 **Sample output:**
 
-1. **Gerenderte HTML-Seite mit allen Chaträumen**
+1. **Rendered HTML Page with All Chatrooms**
 
 <ul>
   <li>Chatroom 1</li>
@@ -98,11 +98,11 @@ The function first checks if the user is logged in by looking for a username in 
 </ul>
 
 
-![Chatroomliste](/docs/technical-docs/doc-img/Chatroomliste.png "Chatroomliste")
+![Chatroomlist](/docs/technical-docs/doc-img/Chatroomliste.png "Chatroomlist")
 
 
 
-2. **Gerenderte HTML-Seite mit gefilterten Chaträumen**
+2. **Rendered HTML Page with Filtered Chatrooms**
 
 <ul>
   <li>Chatroom 2 - Filtered Result</li>
@@ -113,7 +113,7 @@ The function first checks if the user is logged in by looking for a username in 
 ![filtered-chatroomlist](/docs/technical-docs/doc-img/filtered-chatroomlist.png "filtered-chatroomlist")
 
 
-3. **Nachricht über keine Suchergebnisse**
+3. **Message About No Search Results**
 
 <p>No chatrooms found!</p>
 

@@ -35,7 +35,7 @@ How would you rate the simplicity of the login and registration process?
  2
  3
  4
- 5 (Excellenttt)
+ 5 (Excellentt)
 
 
 **Navigation and User Interface**

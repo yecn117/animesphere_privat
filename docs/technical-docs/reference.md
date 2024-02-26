@@ -41,8 +41,12 @@ nav_order: 4
 
 **Sample output:**
 
-Success message (typically): "Your support request has been submitted successfully."
+Success message (typically): "Your support request has been submitted successfully." (failed)
+
+
 Error message: "All fields are required."
+
+![Info Missing](/docs/technical-docs/doc-img/infomissing.png "info-missing")
 
 ------------------------------------------------------------------------------------------------
 ### `home():`
@@ -58,8 +62,59 @@ This function is designed to manage the login and registration process within a 
 
 "Please enter user name and password!"
 
+![Username and Password Output](/docs/technical-docs/doc-img/Username-PW.png "Username and Password Output")
+
 "Your user has been registered!"
+
+![Registered Output](/docs/technical-docs/doc-img/registered.png "Registered Output")
 
 "This username already exists!"
 
+![Already Exists Output](/docs/technical-docs/doc-img/us-already-exists.png "Already Exists Output")
+
 "Username or password is incorrect!"
+
+![False Data Output](/docs/technical-docs/doc-img/falsedata.png "False Data Output")
+
+------------------------------------------------------------------------------------------------
+### `rooms():`
+
+**Route:** `/rooms`
+
+**Methods:** `GET`
+
+**Purpose:** 
+
+The function first checks if the user is logged in by looking for a username in the session. Users who are not logged in are redirected to the home page. For logged-in users, the function retrieves all chat rooms from the database. If a search term is provided, it filters the chat rooms to only show those that match the search criteria. If no chat rooms are found or the search yields no results, an appropriate message is displayed. Finally, the function renders an HTML page that presents the chat rooms (or a message if none were found). This functionality allows users to view existing chat rooms and search for specific chat rooms.
+
+**Sample output:**
+
+1. **Rendered HTML Page with All Chatrooms**
+
+<ul>
+  <li>Chatroom 1</li>
+  <li>Chatroom 2</li>
+  <li>Chatroom 3</li>
+</ul>
+
+
+![Chatroomlist](/docs/technical-docs/doc-img/Chatroomliste.png "Chatroomlist")
+
+
+
+2. **Rendered HTML Page with Filtered Chatrooms**
+
+<ul>
+  <li>Chatroom 2 - Filtered Result</li>
+  <li>Chatroom 3 - Filtered Result</li>
+</ul>
+
+
+![filtered-chatroomlist](/docs/technical-docs/doc-img/filtered-chatroomlist.png "filtered-chatroomlist")
+
+
+3. **Message About No Search Results**
+
+<p>No chatrooms found!</p>
+
+![no-chatrooms-found](/docs/technical-docs/doc-img/no-chatrooms-found.png "no-chatrooms-found")

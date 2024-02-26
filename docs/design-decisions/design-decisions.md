@@ -16,15 +16,7 @@ nav_order: 3
 {: toc }
 </details>
 
-## 01: [Title]
-
-### Meta
-
-Status
-: **Work in progress** - Decided - Obsolete
-
-Updated
-: DD-MMM-YYYY
+## 01: [Design Decision]
 
 --------------------------------------------------------------------------------------------------------------------
 

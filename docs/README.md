@@ -1,72 +1,78 @@
 # AnimeSphere
 **Team 6: AnimeSphere**
 
-Team-Mitglieder: Yakub Ercan und Luka Poljic 
+Team members: Yakub Ercan und Luka Poljic 
+
+
+AnimeSphere is an interactive chat platform that allows users to engage in topic-based chat rooms, create new chat rooms, and participate in discussions. Built using Python, SQLite, HTML, CSS, and JavaScript, the app offers a rich user experience, from secure login systems to direct communication. Integrated search functionality and user-friendly navigation further facilitate efficient interaction and information exchange. With a special focus on the anime community, AnimeSphere creates a space for fans to connect and share content.
+
 
 **value proposition:**
-AnimeSphere ist der ideale Ort, um in privaten Gesprächen mit Freunden und Unbekannten in die Welt der Anime einzutauchen. Tauche ein in die endlose Vielfalt der Anime-Sphere, diskutiere über deine Lieblingsserien und teile deine Leidenschaft für diese faszinierende Form der Unterhaltung. Egal, ob du über Klassiker, die neuesten Veröffentlichungen oder Geheimtipps sprechen möchtest, AnimeSphere bietet dir die perfekte Plattform, um gemeinsam mit Gleichgesinnten über die Abenteuer, Emotionen und Geschichten in der Welt der Anime zu plaudern. Und nicht zu vergessen, für jeden einzelnen Anime gibt es hier auch einen eigenen Chatroom. Trete ein und lass die Anime-Gespräche beginnen!
+AnimeSphere is the ideal place to immerse yourself in the world of anime through private conversations with friends and strangers alike. Dive into the endless variety of the AnimeSphere, discuss your favorite series, and share your passion for this fascinating form of entertainment. Whether you want to talk about classics, the latest releases, or hidden gems, AnimeSphere provides the perfect platform to chat with like-minded individuals about the adventures, emotions, and stories in the world of anime. And let's not forget, there's also a dedicated chat room for each anime, allowing fans to engage in discussions specific to their favorite shows. Step in and let the anime conversations begin!
 
-AnimeSphere löst das Problem der begrenzten Möglichkeiten zur Vernetzung und Diskussion für Anime-Liebhaber, indem es eine dedizierte Plattform bietet, auf der alle Anime-Fans ihre Leidenschaft teilen und tiefgreifende Gespräche über die Welt der Anime führen können.
+AnimeSphere addresses the issue of limited networking and discussion opportunities for anime enthusiasts by providing a dedicated platform where all anime fans can share their passion and engage in meaningful conversations about the world of anime.
 
 
 **User journey:**
 
-15. **Registrierung:**
+The entire user journey is described in the value proposition markdown.
 
-- Gib einen Benutzernamen und ein Passwort deiner Wahl ein.
-- Klicke auf den "SIGN IN" Button, um deinen Account zu erstellen.
+15. **Registration:**
 
-16. **Bestätigung der Registrierung:**
+- Enter a username and password of your choice.
+- Click on the "SIGN IN" button to create your account.
 
-- Überprüfe, ob die Rückmeldung "Benutzer wurde registriert" angezeigt wird.
-- Falls keine Bestätigung erfolgt, melde dich beim Hersteller oder Support.
+16. **Registration Confirmation:**
 
-17. **Anmeldung:**
+- Verify if the feedback "User has been registered" is displayed.
+- If no confirmation is provided, contact the manufacturer or support.
 
-- Gib deinen Benutzernamen und das Passwort erneut ein.
-- Klicke auf den "LOG IN" Button.
+17. **Login:**
+
+- Enter your username and password again.
+- Click on the "LOG IN" button.
 
 18. **Homepage:**
 
-- Nach erfolgreicher Anmeldung wirst du zur Homepage weitergeleitet.
+- Upon successful login, you will be redirected to the homepage.
 
-19. **Anzeige der Chatrooms:**
+19. **Display of Chatrooms:**
 
-- Auf der Homepage sollten alle verfügbaren Chatrooms angezeigt werden.
-- Alternativ wird dir "Keine Chatrooms gefunden!" angezeigt aufgrund der leeren Datenbank.
+- On the homepage, all available chatrooms should be displayed.
+- Alternatively, "No chatrooms found!" will be shown due to the empty database.
 
-20. **Erstellen eines Chatrooms für einen (neuen) Anime:**
+20. **Creating a Chatroom for a (new) Anime:**
 
-- Wenn für einen bestimmten Anime noch kein Chatroom vorhanden ist, navigiere zur Option "Chatroom Creation".
-- Gib den Namen des Animes und lade ein Profilbild für den Chatroom hoch.
-- Beachte, dass das hochgeladene Bild nachträglich nicht geändert werden kann.
-- Nun sollte der Chatroom hinzugefügt worden sein, mit dem Namen des Animes und dem hochgeladenen Bild.
+- If there is no existing chatroom for a specific anime, navigate to the "Chatroom Creation" option.
+- Enter the name of the anime and upload a profile picture for the chatroom.
+- Note that the uploaded image cannot be changed later.
+- The chatroom should now be added with the name of the anime and the uploaded image.
 
-21. **Bestätigung der Chatroom-Erstellung:**
+21. **Confirmation of Chatroom Creation:**
 
-- Überprüfe, ob der neu erstellte Chatroom nun in der Liste der verfügbaren Chatrooms erscheint.
+- Verify if the newly created chatroom now appears in the list of available chatrooms.
 
-22. **Erstellter Chatroom wird nicht angezeigt:**
+22. **Created Chatroom Not Displayed:**
 
-- Kontaktiere den Support über den Reiter "Contact Us"
+- Contact support through the "Contact Us" tab.
 
-23. **Suchfunktion:**
+23. **Search Function:**
 
-- Durchsuche in der Suchleiste (bei Bedarf) die Liste der Chatrooms, um den gewünschten oder erstellten Chatroom zu finden.
+- Use the search bar (if necessary) to search through the list of chatrooms to find the desired or created chatroom.
 
-24. **Chatroom-Zugang:**
+24. **Chatroom Access:**
 
-- Durch das Anklicken des gewünschten Chatrooms gelangst du in den Chatraum.
+- By clicking on the desired chatroom, you will enter the chatroom.
 
-25. **Teilnahme am Chat:**
+25. **Participating in the Chat:**
 
-- Innerhalb des Chatrooms kannst du deine Meinungen und Gefühle zu diesem Anime mit anderen Benutzern teilen.
-- Schreibe deine Nachrichten, Kommentare oder Fragen in das Chatfenster und sende sie ab.
+- Within the chatroom, you can share your opinions and feelings about the anime with other users.
+- Type your messages, comments, or questions into the chat window and send them.
 
-26. **Du willst mehr über AnimeSphere erfahren?:**
+26. **Want to Learn More About AnimeSphere?:**
 
-- Klicke auf den Reiter "About AnimeSphere"
+- Click on the "About AnimeSphere" tab.
 
-27. **Ausloggen**
+27. **Logging Out**
 
-- Logge dich aus, durch das klicken auf den "Log-out Button"
+- Log out by clicking on the "Log Out" button.

@@ -5,7 +5,7 @@ nav_order: 0
 
 # [ AnimeSphere ]
 
-AnimeSphere ist eine interaktive Chat-Plattform, die es Benutzern ermöglicht, sich in themenbasierten Chatrooms auszutauschen, neue Chaträume zu erstellen und an Diskussionen teilzunehmen. Basierend auf Python, SQLite, HTML, CSS und JavaScript bietet die App ein reichhaltiges Nutzererlebnis, von einem sicheren Einlogsystem bis hin zur direkten Kommunikation. Zusätzlich ermöglichen integrierte Suchfunktionen und eine benutzerfreundliche Navigation eine effiziente Interaktion und Informationsaustausch. Mit besonderem Fokus auf die Anime-Community schafft AnimeSphere einen Raum für Fans, um sich zu vernetzen und Inhalte zu teilen.
+AnimeSphere is an interactive chat platform that allows users to engage in topic-based chat rooms, create new chat rooms, and participate in discussions. Built using Python, SQLite, HTML, CSS, and JavaScript, the app offers a rich user experience, from secure login systems to direct communication. Integrated search functionality and user-friendly navigation further facilitate efficient interaction and information exchange. With a special focus on the anime community, AnimeSphere creates a space for fans to connect and share content.
 
 ## Team members
 
@@ -30,4 +30,4 @@ Die oben genannten Teammitglieder erklären an Eides statt:
 > Diese Arbeit wurde selbständig und eigenhändig erstellt. Die den benutzten Quellen wörtlich oder inhaltlich entommenen Stellen sind als solche kenntlich gemacht. Diese Erklärung gilt für jeglichen Inhalt und umfasst sowohl diese Dokumentation als auch den als Projektergebnis eingereichten Quellcode.
 
 {: .fs-2 }
-Last build: {{ site.time | date: '%d %b %Y, %R%:z' }}
+Last build: {{ 15:35:00 | date: '09 Feb 2024, +01:00' }}

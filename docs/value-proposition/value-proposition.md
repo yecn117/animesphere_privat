@@ -3,9 +3,6 @@ title: Value Proposition
 nav_order: 1
 ---
 
-{: .label }
-[Jane Dane]
-
 # [Value proposition]
 {: .no_toc }
 
@@ -53,8 +50,6 @@ Persona 2:
 - Occupation: Office Clerk
 
 Biography: Katia had never really watched anime and never had an interest in doing so. However, over the past few years, she stumbled across clips of anime on social media and heard friends rave about the latest anime hits. At work, she talks with a lot of people who enjoy watching and discussing anime. She listens to them talk back and forth about it, and what she hears sparks an interest in her. After some time, she finally decides to give her first anime a chance, and it does not disappoint. She enjoys it very much and wants to see more of it. As she delves deeper into anime, she realizes that she wants to talk about it. She begins discussing anime with her friends but soon realizes that they have not always seen what she has. So, she starts looking for different outlets to express her feelings on these anime. As a novice to anime and its community, she finds it challenging to do so. Social media platforms tend to lack a focus on her specific anime interests and can be overwhelming with information. That's when AnimeSphere comes in to help guide her introduction into the anime community and provide her with a chatroom dedicated to her favorite anime. Here, she can share her love and experience for the anime that she truly enjoys.
-Personalty: -- 
-Intrest: --
 
 What the personas tell us about the target user of AnimeSphere is that they can be very different people in personality and walks of life. However, they share a striking similarity, and that is the love and passion for their favorite animes and the desire to talk about them. Depending on the person, conversations can range from simple sharing of experiences to complex analyses of the themes of these animes. But what stays true throughout is the desire for social interaction through the medium of anime.
 The reason these users would choose AnimeSphere as their primary place to do this is that it eliminates the hassle and confusion of social media while still being simple and clear for all fans, from the seasoned veteran to the novice.
@@ -63,149 +58,149 @@ The reason these users would choose AnimeSphere as their primary place to do thi
 ## [Customer journey]
 
 
-![Alt-Text](Customer-Journey.png "Customer Journey")
+![Customer Journey](Customer-Journey.png "Customer Journey")
 
 
-**Einfache User Jorney:**
+**Simple User Journey:**
 
-Die User Journey teilt sich in 2 Anleitungen. Du kannst, je nach Wissensstand entscheiden mit wie du beginnst!
+The User Journey is divided into 2 guides. Depending on your level of knowledge, you can decide where to start!
 
-Die Schritte 1 bis 14 umfassen den Vorgang alle Vorrausetzungen zu erfüllen, um die Anwendung zu öffnen..hj
+Steps 1 to 14 cover the process of meeting all the prerequisites to open the application.
 
-Ab Schritt 15 wird die eigentliche User Journey beschrieben.
+Starting from step 15, the actual User Journey is described.
 
-Viel Spass!
+Enjoy!
 
-**Wichtig!**
-Falls du schon Github, Git und VSC auf deinem Rechner installiert hast, dann kannst du die ersten 3 Schritte überspringen.
+**Important!**
+If you already have GitHub, Git, and VSC installed on your computer, you can skip the first 3 steps.
 
-1. **GitHub-Account erstellen (falls noch nicht vorhanden):**
+1. **Create a GitHub Account (if not already done):**
 
-Gehe auf die GitHub-Website.
-Klicke auf "Sign up" und folge den Anweisungen, um einen neuen GitHub-Account zu erstellen.
+Go to the GitHub website.
+Click on "Sign up" and follow the instructions to create a new GitHub account.
 
 
-2. **Git installieren (falls noch nicht vorhanden):**
+2. **Install Git (if not already done):**
 
-Lade Git von der offiziellen Git-Website herunter und installiere es auf deinem Computer.
+Download Git from the official Git website and install it on your computer.
 
-Gegebenfalls Benutzername und Email im Git-Terminal angeben.
+Optionally, specify a username and email in the Git terminal.
 
-3. **Visual Studio Code installieren (falls noch nicht vorhanden):**
+3. **Install Visual Studio Code (if not already done):**
 
-Lade Visual Studio Code von der offiziellen Website herunter und installiere es.
+Download Visual Studio Code from the official website and install it.
 
-4. **GitHub-Repository-Link erhalten:**
+4. **Get the GitHub Repository Link:**
 
-Jemand sendet dir den Link zum GitHub-Repository. Es sieht in etwa so aus: "https://github.com/Benutzer/Repo.git".
+Someone sends you the link to the GitHub repository. It looks something like this: "https://github.com/User/Repo.git".
 
-5. **Ordner für das Repository erstellen:**
+5. **Create a Folder for the Repository:**
 
-Erstelle auf deinem Computer einen Ordner, in dem du das Repository speichern möchtest.
+Create a folder on your computer where you want to store the repository.
 
-6. **Visual Studio Code öffnen:**
+6. **Open Visual Studio Code:**
 
-Starte Visual Studio Code.
+Start Visual Studio Code.
 
-7. **Terminal in VS Code öffnen:**
+7. **Open Terminal in VS Code:**
 
-Klicke oben im VS Code-Fenster auf "View" und wähle "Terminal", um das integrierte Terminal zu öffnen.
+Click on "View" at the top of the VS Code window and select "Terminal" to open the integrated terminal.
 
-8. **Zum gewünschten Verzeichnis wechseln:**
+8. **Change to the Desired Directory:**
 
-Navigiere mit dem Terminal zum Ordner, den du für das Repository erstellt hast, mit dem Befehl "cd Pfad/zum/Ordner".
+Navigate to the folder you created for the repository using the command "cd path/to/folder" in the terminal.
 
-9. **Repository klonen:**
+9. **Clone the Repository:**
 
-Verwende den Befehl "git clone" gefolgt von der Repository-URL:
+Use the command "git clone" followed by the repository URL:
 
-"git clone https://github.com/Benutzer/Repo.git"
+"git clone https://github.com/User/Repo.git"
 
-10. **In den Repository-Ordner wechseln:**
+10. **Change to the Repository Folder:**
 
-Wechsle mit dem Befehl "cd Repo" in den Ordner des geklonten Repositories.
+Switch to the cloned repository's folder with the command "cd Repo".
 
-11. **Virtual Environment erstellen:**
+11. **Create a Virtual Environment:**
 
-Wenn der env-Ordner bereits im Repository vorhanden ist, aktiviere das virtuelle Umgebungsmodul mit dem Befehl (für Windows):
+If the env folder already exists in the repository, activate the virtual environment module with the command (for Windows):
 
 ".\env\Scripts\activate"
 
-Oder für macOS/Linux:
+Or for macOS/Linux:
 
 "source env/bin/activate"
 
-12. **Abhängigkeiten installieren:**
+12. **Install Dependencies:**
 
-Führe den Befehl "pip install -r requirements.txt" aus, um die erforderlichen Python-Abhängigkeiten zu installieren.
+Run the command "pip install -r requirements.txt" to install the required Python dependencies.
 
-13. **Flask-Anwendung starten:**
+13. **Start the Flask Application:**
 
-Starte die Flask-Anwendung mit dem Befehl:  "python main.py"
+Start the Flask application with the command: "python main.py"
 
-14. **Öffne die Anwendung im Browser:**
+14. **Open the Application in the Browser:**
 
-Halte die Taste "Strg" gedrückt und klicke mit dem Mauszeiger auf die ausgegebe URL, welche normalerweise folgendermaßen ausschaut: "http://localhost:5000"
+Hold down the "Ctrl" key and click on the URL output, which usually looks like this: "http://localhost:5000"
 
 
 **Actual User journey:**
 
-15. **Registrierung:**
+15. **Registration:**
 
-- Gib einen Benutzernamen und ein Passwort deiner Wahl ein.
-- Klicke auf den "SIGN IN" Button, um deinen Account zu erstellen.
+- Enter a username and password of your choice.
+- Click on the "SIGN IN" button to create your account.
 
-16. **Bestätigung der Registrierung:**
+16. **Registration Confirmation:**
 
-- Überprüfe, ob die Rückmeldung "Benutzer wurde registriert" angezeigt wird.
-- Falls keine Bestätigung erfolgt, melde dich beim Hersteller oder Support.
+- Verify if the feedback "User has been registered" is displayed.
+- If no confirmation is provided, contact the manufacturer or support.
 
-17. **Anmeldung:**
+17. **Login:**
 
-- Gib deinen Benutzernamen und das Passwort erneut ein.
-- Klicke auf den "LOG IN" Button.
+- Enter your username and password again.
+- Click on the "LOG IN" button.
 
 18. **Homepage:**
 
-- Nach erfolgreicher Anmeldung wirst du zur Homepage weitergeleitet.
+- Upon successful login, you will be redirected to the homepage.
 
-19. **Anzeige der Chatrooms:**
+19. **Display of Chatrooms:**
 
-- Auf der Homepage sollten alle verfügbaren Chatrooms angezeigt werden.
-- Alternativ wird dir "Keine Chatrooms gefunden!" angezeigt aufgrund der leeren Datenbank.
+- On the homepage, all available chatrooms should be displayed.
+- Alternatively, "No chatrooms found!" will be shown due to the empty database.
 
-20. **Erstellen eines Chatrooms für einen (neuen) Anime:**
+20. **Creating a Chatroom for a (new) Anime:**
 
-- Wenn für einen bestimmten Anime noch kein Chatroom vorhanden ist, navigiere zur Option "Chatroom Creation".
-- Gib den Namen des Animes und lade ein Profilbild für den Chatroom hoch.
-- Beachte, dass das hochgeladene Bild nachträglich nicht geändert werden kann.
-- Nun sollte der Chatroom hinzugefügt worden sein, mit dem Namen des Animes und dem hochgeladenen Bild.
+- If there is no existing chatroom for a specific anime, navigate to the "Chatroom Creation" option.
+- Enter the name of the anime and upload a profile picture for the chatroom.
+- Note that the uploaded image cannot be changed later.
+- The chatroom should now be added with the name of the anime and the uploaded image.
 
-21. **Bestätigung der Chatroom-Erstellung:**
+21. **Confirmation of Chatroom Creation:**
 
-- Überprüfe, ob der neu erstellte Chatroom nun in der Liste der verfügbaren Chatrooms erscheint.
+- Verify if the newly created chatroom now appears in the list of available chatrooms.
 
-22. **Erstellter Chatroom wird nicht angezeigt:**
+22. **Created Chatroom Not Displayed:**
 
-- Kontaktiere den Support über den Reiter "Contact Us"
+- Contact support through the "Contact Us" tab.
 
-23. **Suchfunktion:**
+23. **Search Function:**
 
-- Durchsuche in der Suchleiste (bei Bedarf) die Liste der Chatrooms, um den gewünschten oder erstellten Chatroom zu finden.
+- Use the search bar (if necessary) to search through the list of chatrooms to find the desired or created chatroom.
 
-24. **Chatroom-Zugang:**
+24. **Chatroom Access:**
 
-- Durch das Anklicken des gewünschten Chatrooms gelangst du in den Chatraum.
+- By clicking on the desired chatroom, you will enter the chatroom.
 
-25. **Teilnahme am Chat:**
+25. **Participating in the Chat:**
 
-- Innerhalb des Chatrooms kannst du deine Meinungen und Gefühle zu diesem Anime mit anderen Benutzern teilen.
-- Schreibe deine Nachrichten, Kommentare oder Fragen in das Chatfenster und sende sie ab.
+- Within the chatroom, you can share your opinions and feelings about the anime with other users.
+- Type your messages, comments, or questions into the chat window and send them.
 
-26. **Du willst mehr über AnimeSphere erfahren?:**
+26. **Want to Learn More About AnimeSphere?:**
 
-- Klicke auf den Reiter "About AnimeSphere"
+- Click on the "About AnimeSphere" tab.
 
-27. **Ausloggen**
+27. **Logging Out**
 
-- Logge dich aus, durch das klicken auf den "Log-out Button"
+- Log out by clicking on the "Log Out" button.
